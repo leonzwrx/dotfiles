@@ -7,8 +7,25 @@
 #
 #
 # Base tutorial on best way to store dotfiles in a bare git repo: https://www.atlassian.com/git/tutorials/dotfiles
-# Inspired largely by Distrotube's dotfile repo https://gitlab.com/dwt1/dotfiles
+# Inspired largely by Distrotube's dotfile project: https://gitlab.com/dwt1/dotfiles
+# Also inspired by Chris Titus Tech mybash project:  https://github.com/ChrisTitusTech/mybash
 # Very popular dotfile project: https://github.com/mathiasbynens/dotfiles/tree/main
+
+#######################################################
+# SOURCED ALIASES and SCRIPTS
+#######################################################
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Enable bash programmable completion features in interactive shells
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
 
 ### EXPORT
 export PAGER=most                                 # easy to read pager with scrolling
@@ -93,7 +110,7 @@ alias .....='cd ../../../..'
 alias jctl="journalctl -p 3 -xb"
 
 # bare git repo alias for managing my dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/_dotfiles --work-tree=$HOME"
+alias config="/usr/bin/git --git-dir=$HOME/git_projects/_dotfiles --work-tree=$HOME"
 
 #replace rm with trashcli
 alias rm='trash -v'
