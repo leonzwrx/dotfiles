@@ -7,6 +7,7 @@
 #
 #
 # Base tutorial on best way to store dotfiles in a bare git repo: https://www.atlassian.com/git/tutorials/dotfiles
+# Inspired largely by Distrotube's dotfile repo https://gitlab.com/dwt1/dotfiles
 # Very popular dotfile project: https://github.com/mathiasbynens/dotfiles/tree/main
 
 ### EXPORT
