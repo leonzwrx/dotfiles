@@ -36,7 +36,7 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = "[ on $hostname](bold )"
+format = '[   \[$hostname](bold)\]'
 disabled = false
 
 # truncation length works backwards (i.e., cwd > parent > parent ...)
@@ -71,8 +71,8 @@ default = "unknown shell"
 disabled = true
 
 [cmd_duration]
-min_time = 500
-format = '[$duration](bold yellow)'
+min_time = 1000
+format = '\[[⏱  $duration]($style)\]'
 
 # Show python version starting with venv
 [python]
