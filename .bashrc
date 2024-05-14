@@ -136,6 +136,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+#other useful aliases
+alias topmem='ps -eo pmem,pid,pcpu,comm= | sort -k1 -n -r | head -n 25'
+alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
+
 #local network SSH
 alias ssh-pihole='ssh leo@pihole.nilva.local'
 alias ssh-retropie='ssh leo@retropie.nilva.local'
@@ -154,6 +158,7 @@ sudo() {
     command sudo "$@"
   fi
 }
+
 
 # Install Starship - curl -sS https://starship.rs/install.sh | sh
 
