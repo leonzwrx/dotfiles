@@ -65,7 +65,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 
 " Plugin Shortcuts
-	map <Leader>f :NERDTreeToggle<CR>
+	map <Leader>n :NERDTreeToggle<CR>
 " map <C-\> :Goyo<CR>
   map <Leader>g :Goyo<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
