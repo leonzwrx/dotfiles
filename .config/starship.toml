@@ -47,7 +47,7 @@ truncate_to_repo = true
 
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
+"Downloads" = "󰇚"
 "Music" = "󰝚 "
 "MP3" = "󰝚 "
 "Pictures" = " "
