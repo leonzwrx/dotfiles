@@ -44,7 +44,8 @@ call plug#end()
 	set noswapfile
 	set nobackup
 	set incsearch
-	set history=5000
+	set hlsearch
+  set history=5000
 	set nocompatible
   set number relativenumber
   " old themes one desert and habamax
