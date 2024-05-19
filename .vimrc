@@ -23,8 +23,6 @@ call plug#end()
   let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
   set mouse=a "Allows mouse usage inside vim. Great for noobs.
   set clipboard=unnamedplus "Remaps default copy paste to system clipboard
-  "set clipboard+=unnamed  " WINDOWS SETTING - use the clipboards of vim and win
-  "set paste               " WINDOWS SETTING - Paste from a windows or from vim
   set go+=a                " Makes the Menu bar permanently visible in gVIM 
   set cursorline
   highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
@@ -67,10 +65,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Plugin Shortcuts
 	map <Leader>n :NERDTreeToggle<CR>
-" map <C-\> :Goyo<CR>
   map <Leader>g :Goyo<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
-" nnoremap <C-f> :Files!<CR>
   nnoremap <Leader>f :Files!<CR>
   nnoremap <Leader>h :History<CR>
 " nnoremap <Leader>l :Tabularize /

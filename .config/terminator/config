@@ -3,16 +3,14 @@
   help = <Shift>F1
 [profiles]
   [[default]]
-    background_darkness = 0.94
+    background_darkness = 0.8
     background_type = transparent
     cursor_shape = underline
     cursor_fg_color = "#000000"
-    cursor_bg_color = "#38ef2e"
+    cursor_bg_color = "#aaaaaa"
+    cursor_color_default = False
     font = Ubuntu Mono Medium 11
-    foreground_color = "#00ff00"
-    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
     use_system_font = False
-    bold_is_bright = True
   [[Leo-custom]]
     background_darkness = 0.9
     background_type = transparent
