@@ -1,0 +1,42 @@
+[global_config]
+[keybindings]
+  help = <Shift>F1
+[profiles]
+  [[default]]
+    background_darkness = 0.94
+    background_type = transparent
+    cursor_shape = underline
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#38ef2e"
+    font = Ubuntu Mono Medium 11
+    foreground_color = "#00ff00"
+    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
+    use_system_font = False
+    bold_is_bright = True
+  [[Leo-custom]]
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_shape = underline
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#aaaaaa"
+    font = Ubuntu Mono Medium 11
+    use_system_font = False
+  [[Nord-modified]]
+    background_darkness = 0.9
+    background_type = transparent
+    font = Ubuntu Mono Medium 11
+    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
+    use_system_font = False
+    use_theme_colors = True
+  [[Nord]]
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      profile = None
+      size = 1900, 1000
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

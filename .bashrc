@@ -110,7 +110,7 @@ alias .....='cd ../../../..'
 alias jctl="journalctl -p 3 -xb"
 
 # bare git repo alias for managing my dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/git_projects/_dotfiles --work-tree=$HOME"
+alias gitconfig="/usr/bin/git --git-dir=$HOME/git_projects/_dotfiles --work-tree=$HOME"
 
 #replace rm with trashcli
 alias rm='trash -v'
