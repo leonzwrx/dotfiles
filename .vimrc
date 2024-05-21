@@ -20,8 +20,14 @@ call plug#end()
   let NERDTreeShowHidden=1
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
-  let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
-  set mouse=a "Allows mouse usage inside vim. Great for noobs.
+  if executable('fdfind')
+    let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
+  elseif executable('fd')
+    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
+  else
+    echo "Neither fdfind nor fd is available"
+  endif
+ set mouse=a "Allows mouse usage inside vim. Great for noobs.
   set clipboard=unnamedplus "Remaps default copy paste to system clipboard
   set go+=a                " Makes the Menu bar permanently visible in gVIM 
   set cursorline
