@@ -22,9 +22,8 @@ syntax on
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
   let g:fzf_vim = {}
   let g:fzf_vim.preview_bash = 'C:\\Users\\1136403\\AppData\\Local\\Programs\\Git\\git-bash.exe'
-  let $FZF_DEFAULT_COMMAND = 'C:\_bin\fd --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
-  " Set the FZF command to use fd, starting from the OneDrive directory
-  "let $FZF_DEFAULT_COMMAND = 'C:\\_bin\\fd --type f --hidden --follow --exclude .git --ignore-file ~/.ignore ' . expand('$OneDrive')
+  let $FZF_DEFAULT_COMMAND = 'C:\_bin\fd --type f --hidden --follow --exclude .git --ignore-file ~/.fzfignore'
+  
   set mouse=a "Allows mouse usage inside vim. Great for noobs.
   set clipboard=unnamedplus "Remaps default copy paste to system clipboard
   set go+=a                " Makes the Menu bar permanently visible in gVIM
