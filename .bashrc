@@ -27,7 +27,7 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 ### EXPORT
-export PAGER=most                                 # easy to read pager with scrolling
+#export PAGER=most                                 # easy to read pager with scrolling
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 
@@ -116,16 +116,20 @@ alias rm='trash -v'
 #replace ls with lsd
 alias ls='lsd'
 
-# Replace batcat with cat on Fedora as batcat is not available as a RPM in any form
+# Replace bat with cat on Fedora as batcat is not available. Also set batcat as pager
 if command -v lsb_release >/dev/null; then
 	DISTRIBUTION=$(lsb_release -si)
 
 	if [ "$DISTRIBUTION" = "Fedora" ]; then
 		alias cat='bat'
-	else
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+  else
 		alias cat='batcat'
-	fi
+   	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+  fi
 fi
+#fix manpager formatting
+export MANROFFOPT="-c"
 
 # more common aliases
 alias ll='ls -alF'
