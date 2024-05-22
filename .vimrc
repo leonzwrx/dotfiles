@@ -21,9 +21,9 @@ call plug#end()
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
   if executable('fdfind')
-    let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
+    let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.fzfignore'
   elseif executable('fd')
-    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
+    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git --ignore-file ~/.fzfignore'
   else
     echo "Neither fdfind nor fd is available"
   endif
