@@ -59,7 +59,7 @@ set wildmenu
 set wildmode=longest,list,full
 set laststatus=2 " Ensure the statusline is always visible
 set guifont=Ubuntu\ Mono:h11
-
+set bs=2 " For Windows backspace key to work properly
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set spell spelllang=en_us
 
