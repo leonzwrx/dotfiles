@@ -1,7 +1,8 @@
 " Plugin Loading
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' "Highlights lines
-Plug 'joshdick/onedark.vim' "The One Dark Theme
+"Plug 'joshdick/onedark.vim' "The One Dark Theme
+Plug 'nordtheme/vim' "Nord Theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' "Fuzzy find plugin
 Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
@@ -54,7 +55,7 @@ call plug#end()
   set number relativenumber
   " old themes one desert and habamax
   set background=dark
-  colorscheme onedark
+  colorscheme nord
   set termguicolors
 	filetype plugin on
 	set encoding=utf-8
