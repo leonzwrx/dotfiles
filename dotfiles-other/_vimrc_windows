@@ -1,7 +1,8 @@
 " Plugin Loading
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' "Highlights lines
-Plug 'joshdick/onedark.vim' "The One Dark Theme
+"Plug 'joshdick/onedark.vim' "The One Dark Theme
+Plug 'nordtheme/vim' "Nord Theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' "Fuzzy find plugin
 Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
@@ -51,7 +52,7 @@ set nocompatible
   set number relativenumber
   " old themes one desert and habamax
   set background=dark
-  colorscheme onedark
+  colorscheme nord
   set termguicolors
 filetype plugin on
 set encoding=utf-8
@@ -59,7 +60,7 @@ set wildmenu
 set wildmode=longest,list,full
 set laststatus=2 " Ensure the statusline is always visible
 set guifont=Ubuntu\ Mono:h11
-set bs=2 " For Windows backspace key to work properly
+
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set spell spelllang=en_us
 
