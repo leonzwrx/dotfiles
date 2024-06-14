@@ -149,6 +149,9 @@ alias ssh-retropie='ssh leo@retropie.nilva.local'
 alias ssh-pve1='ssh leo@pve1.nilva.local'
 alias ssh-powertec='ssh leo@powertec.nilva.local'
 
+#start cmus console music player with visualization
+alias start-music="terminator --layout=music"
+
 #convert apt to nala
 apt() { 
   command nala "$@"

@@ -45,4 +45,36 @@
       type = Terminal
       parent = window0
       profile = default
+  [[music]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 2756:169
+      maximised = False
+      fullscreen = False
+      size = 1581, 392
+      title = leo@powerspec:~
+      last_active_term = c1d3fbb2-5fc7-4407-a82d-83936cc7b209
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 961
+      ratio = 0.6097715736040609
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = c1d3fbb2-5fc7-4407-a82d-83936cc7b209
+      command = cmus
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = a03944e3-f374-4fa2-a81d-b0faa8aae95f
+      command = cava
 [plugins]
