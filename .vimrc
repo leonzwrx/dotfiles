@@ -14,6 +14,7 @@ Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
 Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
+Plug 'jasonccox/vim-wayland-clipboard' "workaround for vim's Wayland issues. Use "+ prior to y or p commands
 call plug#end()
 
 " Startup Settings
@@ -55,7 +56,7 @@ call plug#end()
   set number relativenumber
   " old themes one desert and habamax
   set background=dark
-  colorscheme nord
+  colorscheme onedark 
   set termguicolors
 	filetype plugin on
 	set encoding=utf-8
@@ -77,7 +78,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   nnoremap <Leader>f :Files!<CR>
   nnoremap <Leader>h :History<CR>
 " nnoremap <Leader>l :Tabularize /
-
+ 
 " General Shortcuts
 "  nnoremap S :%s//g<Left><Left> 
 "  nmap <Leader>r :w<CR>:so %<CR>
@@ -111,3 +112,5 @@ inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 " transparent bg
 " autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+
+
