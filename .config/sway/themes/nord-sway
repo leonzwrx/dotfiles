@@ -1,0 +1,23 @@
+################----------------THEMING----------------################
+
+# Window borders
+default_border pixel 2
+smart_borders on
+smart_gaps on
+gaps inner 8
+
+# Themes
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme "Nordic"
+    gsettings set $gnome-schema icon-theme "Papirus"
+    gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
+}
+
+# Src : https://github.com/lokesh-krishna/dotfiles/blob/master/nord-v3/config/sway/config
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
+client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
+client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b

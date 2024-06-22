@@ -1,0 +1,5 @@
+git_projects
+
+#ignore some sway files
+~/.config/sway/outputs
+~/.config/sway/workspaces

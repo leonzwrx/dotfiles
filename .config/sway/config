@@ -1,0 +1,24 @@
+### Include theme
+# include $HOME/.config/sway/themes/breeze-sway
+include $HOME/.config/sway/themes/nord-sway
+
+### Include configs
+include /etc/sway/config.d/*
+include $HOME/.config/sway/config.d/*.conf
+
+include $HOME/.config/sway/inputs/*
+include $HOME/.config/sway/outputs/*
+
+### Include modes
+include $HOME/.config/sway/modes/*
+
+#Azote for backgrounds
+exec ~/.azotebg
+
+#
+# Status Bar:
+#
+bar {
+   swaybar_command waybar
+}
+

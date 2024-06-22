@@ -1,0 +1,48 @@
+/* Make Waybar background semi-transparent */
+#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #000000;
+}
+
+/* Icon modules */
+#custom-clock,
+#custom-menu,
+#custom-playerctl,
+#cpu,
+#memory,
+#battery,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding: 0 6px; /* Adjusted padding */
+    margin: 0 4px;
+}
+
+/* Bottom borders */
+#custom-clock,
+#custom-menu,
+#custom-playerctl,
+#cpu,
+#memory,
+#battery,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor {
+    border-bottom: 3px solid @theme_selected_bg_color;
+}
+
+/* CPU, memory, battery, and pulseaudio specific styling */
+#cpu,
+#memory,
+#battery,
+#pulseaudio {
+    padding-left: 8px; /* Adjusted padding */
+    padding-right: 8px; /* Adjusted padding */
+}
+

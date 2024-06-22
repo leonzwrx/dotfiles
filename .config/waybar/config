@@ -1,0 +1,205 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["custom/wf-recorder", "custom/weather"],
+    "modules-right": [
+        "custom/playerctl",
+	"sway/language",
+	"backlight",
+	"idle_inhibitor",
+	// "power-profiles-daemon",//Commenting out for now since cpu-autofreq is used
+        "cpu",
+        "memory",
+        "battery",
+        "temperature",
+        // "network", //Commenting this out for now since nm-applet is running in system tray
+        "pulseaudio",
+        "custom/clock",
+        "tray"
+    ],
+    
+    "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    // "persistent_workspaces": ["1", "2", "3", "4", "5"],// persistent stuff doesn't seem to work just yet
+    "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+      }
+    },
+    
+    "sway/language": {
+        "format": " {}",
+        "min-length": 5,
+        "tooltip": false,
+        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
+    },
+    
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false
+    },
+    
+    "sway/window": {
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+       //"format": "{icon}  {volume}% {format_source}",
+       "format": "{icon}  {volume}%",
+       "format-bluetooth": "{icon} {volume}%",
+       "format-muted": " {format_source}",
+       "format-source": "  {volume}%",
+       "format-source-muted": "",
+       "format-icons": {
+           "headphone": "",
+           "headset": "",
+           "default": ["", "", ""]
+       },
+       //"tooltip-format": "{icon}  {volume}% {format_source}",
+       "tooltip-format": "{icon}  {volume}%",
+       "on-click": "swaymsg exec \\$pulseaudio",
+       "on-click-middle": "swaymsg exec \\$volume_mute",
+       "on-click-right": "swaymsg exec pavucontrol",
+       "on-scroll-up": "swaymsg exec \\$volume_up",
+       "on-scroll-down": "swaymsg exec \\$volume_down"
+    },
+
+    "battery": {
+        "bat-compatibility":true,
+        "format": "<span font='Font Awesome 5 Free 11'>{icon} </span>{capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon} </span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": true,
+        "on-click": "swaymsg exec \\$term_float_portrait 'auto-cpufreq --stats'"        
+    },
+    "custom/menu": {
+       "format": "",
+       "on-click": "swaymsg exec \\$menu",
+       "tooltip": false,
+    },
+    
+    "network": {
+       "format-wifi": " ",
+       "format-ethernet": "",
+       "format-disconnected": "",
+       "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+       "on-click": "swaymsg exec \\$term_float nmtui"
+    },
+    
+    "custom/clock": {
+        "exec": "echo ''$(date +'%H:%M | %e %b %Y')''",
+        "interval": 5,
+        "on-click": "swaymsg exec \\$calendar"
+    },
+    
+    "cpu": {
+        "interval": 5,
+        "format": "   {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+          },
+    "on-click": "swaymsg exec \\$term_float htop"
+    },
+    
+    "memory": {
+        "interval": 30,
+	"format": "   {used:0.1f}G/{total:0.1f}G",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        },
+    "on-click": "swaymsg exec \\$term_float htop"
+    
+    },
+    
+    "custom/wf-recorder": {
+         "interval": "once",
+         "return-type": "json",
+         "format": "{}",
+         "tooltip-format": "{tooltip}",
+         "exec": "echo '{\"class\": \"recording\",\"text\":\"\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
+         "exec-if": "pgrep wf-recorder",
+         "on-click": "killall -s SIGINT wf-recorder",
+         "signal": 8
+    },
+
+    "custom/playerctl": {
+        "interval": "once",
+        "tooltip": true,
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "Playing": "",
+            "Paused": ""
+        },
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+        "signal": 5
+    },
+    
+   "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 1800,
+    "exec": "wttrbar --fahrenheit --mph --location Centennial",
+    "return-type": "json"
+}, 
+    "temperature": {
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "swaymsg exec \"\\$term_float watch sensors\""
+    },
+        "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+  "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
