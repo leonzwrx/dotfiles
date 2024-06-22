@@ -147,7 +147,7 @@ alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
 alias ssh-pihole='ssh leo@pihole.nilva.local'
 alias ssh-retropie='ssh leo@retropie.nilva.local'
 alias ssh-pve1='ssh leo@pve1.nilva.local'
-alias ssh-powertec='ssh leo@powertec.nilva.local'
+alias ssh-powerspec='ssh leo@powerspec.nilva.local'
 
 #start cmus console music player with visualization
 alias start-music="terminator --layout=music"
