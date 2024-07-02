@@ -1,4 +1,5 @@
 git_projects
+test
 
 #ignore some sway files
 ~/.config/sway/outputs
