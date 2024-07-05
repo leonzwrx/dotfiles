@@ -7,7 +7,7 @@ include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*.conf
 
 include $HOME/.config/sway/inputs/*
-include $HOME/.config/sway/outputs/*
+include $HOME/.config/sway/outputs
 
 ### Include modes
 include $HOME/.config/sway/modes/*
