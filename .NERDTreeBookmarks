@@ -1,4 +1,5 @@
+.config ~/.config
 Documents ~/Documents
 git_projects ~/git_projects
-.config ~/.config
+gdrive ~/mnt/gdrive
 
