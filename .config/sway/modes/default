@@ -169,3 +169,8 @@
     # Move focus to the parent container
     $bindsym $mod+a focus parent
 
+# Passthru mode for wayvnc
+mode passthrough {
+	bindsym $mod+Pause mode default
+}
+bindsym $mod+Pause mode passthrough
