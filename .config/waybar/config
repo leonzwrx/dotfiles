@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["custom/menu", "sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["custom/wf-recorder", "custom/weather"],
+    "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
+    "modules-center": ["custom/wf-recorder", "sway/mode", "custom/weather"],
     "modules-right": [
         "custom/playerctl",
 	"sway/language",
@@ -52,7 +52,7 @@
     "sway/window": {
         "format": "{}",
         "max-length": 50,
-        "tooltip": false
+        "tooltip": true
     },
 
     "pulseaudio": {
