@@ -22,14 +22,14 @@
 
     # Start gvim
     $bindsym $mod+F4 exec gvim 
-    
-    #Take a screenshot (whole screen)
-    $bindsym Print exec $screenshot_screen
-    # Take a screenshot of selected region
-    $bindsym $mod+Print exec $screenshot_selection
-    # Take a screenshot of a manual selection
-    #$bindsym $mod+Shift+Print exec $screenshot_active
-    $bindsym $mod+Shift+Print exec $screenshot_anything
+   
+    ##Taking this out to introduce the new screenshot mode like in Ubuntu Sway
+    ##Take a screenshot (whole screen)
+    #$bindsym Print exec $screenshot_screen
+    ## Take a screenshot of selected region
+    #$bindsym $mod+Print exec $screenshot_selection
+    ## Take a screenshot of a manual selection
+    #$bindsym $mod+Shift+Print exec $screenshot_anything
     
     # Clipboard manager
     $bindsym $mod+Shift+p exec $clipboard
