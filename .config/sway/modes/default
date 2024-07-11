@@ -169,6 +169,9 @@
     # Move focus to the parent container
     $bindsym $mod+a focus parent
 
+## Launch // Toggle Help ##
+$bindsym $mod+question exec $help
+
 # Passthru mode for wayvnc
 mode passthrough {
 	bindsym $mod+Pause mode default
