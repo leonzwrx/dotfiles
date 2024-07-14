@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -e
+
 DIR=$HOME/Screenshots
 
 while true; do
