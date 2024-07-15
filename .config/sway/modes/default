@@ -164,6 +164,9 @@ $bindsym $mod+Mod1+f exec $filer
 ## Launch // GVim ##
 $bindsym $mod+Mod1+v exec gvim
 
+## Launch // Galculator ##
+$bindsym $mod+Mod1+c exec galculator
+
 # Passthru mode for wayvnc
 mode passthrough {
 	bindsym $mod+Pause mode default
