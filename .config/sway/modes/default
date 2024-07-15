@@ -156,13 +156,13 @@ $bindsym $mod+question exec $help
 #######################################
 
 ## Launch // Web Browser ##
-$bindsym $mod+F2 exec google-chrome-stable
+$bindsym $mod+Mod1+b exec google-chrome-stable
 
 ## Launch // File Manager ##
-$bindsym $mod+F3 exec $filer 
+$bindsym $mod+Mod1+f exec $filer 
 
 ## Launch // GVim ##
-$bindsym $mod+F4 exec gvim 
+$bindsym $mod+Mod1+v exec gvim
 
 # Passthru mode for wayvnc
 mode passthrough {
