@@ -4,13 +4,13 @@
 function start() {
     [[ -f "$HOME/.config/wlsunset/config" ]] && source "$HOME/.config/wlsunset/config"
     temp_low=${temp_low:-"4000"}
-    temp_high=${temp_high:-"6500"}
+    temp_high=${temp_high:-"6800"}
     duration=${duration:-"900"}
     sunrise=${sunrise:-"07:00"}
     sunset=${sunset:-"19:00"}
     location=${location:-"on"}
-    fallback_longitude=${fallback_longitude:-"8.7"}
-    fallback_latitude=${fallback_latitude:-"50.1"}
+    fallback_longitude=${fallback_longitude:-"-104.7866"}
+    fallback_latitude=${fallback_latitude:-"39.6562"}
 
     if [ "${location}" = "on" ]; then
         if [[ -z ${longitude+x} ]] || [[ -z ${latitude+x} ]]; then
