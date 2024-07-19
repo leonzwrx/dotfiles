@@ -5,19 +5,20 @@
     "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
     "modules-center": ["custom/wf-recorder", "sway/mode", "custom/weather"],
     "modules-right": [
-        "custom/playerctl",
-	"sway/language",
-	"backlight",
-	"idle_inhibitor",
-	// "power-profiles-daemon",//Commenting out for now since cpu-autofreq is used
-        "cpu",
-        "memory",
-        "battery",
-        "temperature",
-        // "network", //Commenting this out for now since nm-applet is running in system tray
-        "pulseaudio",
-        "custom/clock",
-        "tray"
+    "custom/wlsunset", 
+    "idle_inhibitor", 
+    "custom/help",
+    "custom/playerctl",
+	  "sway/language",
+	  "backlight",
+	//"power-profiles-daemon",//Commenting out for now since cpu-autofreq is used
+    "cpu",
+    "memory",
+    "battery",
+    "temperature",
+    "pulseaudio",
+    "custom/clock",
+    "tray"
     ],
     
     "sway/workspaces": {
@@ -38,7 +39,7 @@
     },
     
     "sway/language": {
-        "format": " {}",
+        "format": "  {}",
         "min-length": 5,
         "tooltip": false,
         "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
@@ -95,14 +96,6 @@
        "format": "",
        "on-click": "swaymsg exec \\$menu",
        "tooltip": false,
-    },
-    
-    "network": {
-       "format-wifi": " ",
-       "format-ethernet": "",
-       "format-disconnected": "",
-       "tooltip-format": "{ifname} ({essid}): {ipaddr}",
-       "on-click": "swaymsg exec \\$term_float nmtui"
     },
     
     "custom/clock": {
@@ -178,7 +171,7 @@
         "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+        "format-icons": [" 🌑 ", " 🌘 ", " 🌗 ", " 🌖 ", " 🌕 "]
     },
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -198,6 +191,28 @@
             "deactivated": ""
         }
     },
+        "custom/wlsunset": {
+        "interval": "once",
+        "tooltip": true,
+        "tooltip-format": "{tooltip}",
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "on": "    ",
+            "off": "    "
+        },
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/sway/scripts/sunset.sh",
+        "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec-if": "$HOME/.config/sway/scripts/sunset.sh check",
+        "signal": 6
+    },
+
+    "custom/help": {
+        "format": "      ",
+        "on-click": "$HOME/.config/sway/scripts/help.sh --toggle",
+        "tooltip": "false"
+    },
+
     "tray": {
         "icon-size": 21,
         "spacing": 10
