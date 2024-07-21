@@ -14,6 +14,9 @@
 # SOURCED ALIASES and SCRIPTS
 #######################################################
 
+#launch fastfetch
+fastfetch --config /usr/share/fastfetch/presets/examples/17.jsonc 
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -108,8 +111,20 @@ alias .....='cd ../../../..'
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
+#################
+###GIT ALIASES###
+#################
+
 # bare git repo alias for managing my dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/git_projects/_dotfiles --work-tree=$HOME"
+
+#add updated and save
+alias gsave="git commit -a -m \"$(date +'%m-%d-%y') save\""
+alias gsavedf="dotfiles commit -a -m \"$(date +'%m-%d-%y') save\""
+
+#informational commit history:
+alias gloga="git log --graph --color --decorate --oneline"
+
 
 #replace rm with trashcli
 alias rm='trash -v'
