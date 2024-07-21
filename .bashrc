@@ -15,7 +15,7 @@
 #######################################################
 
 #launch fastfetch
-fastfetch --config /usr/share/fastfetch/presets/examples/17.jsonc 
+fastfetch --config $HOME/.config/fastfetch/config_compact.json
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
