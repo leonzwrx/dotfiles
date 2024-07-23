@@ -100,3 +100,5 @@ inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 " transparent bg
 " autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+set backspace=indent,eol,start  " more powerful backspacing
+
