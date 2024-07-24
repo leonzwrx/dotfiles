@@ -24,9 +24,10 @@
     show_titlebar = False
     scrollbar_position = hidden
     use_system_font = False
+    use_theme_colors = True
   [[nord]]
     background_color = "#2E3440"
-    background_darkness = 0.95
+    background_darkness = 0.9
     background_type = transparent
     cursor_shape = underline
     font = Ubuntu Mono 11
@@ -35,6 +36,7 @@
     scrollbar_position = hidden
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
     use_system_font = False
+    bold_is_bright = True
 [layouts]
   [[default]]
     [[[window0]]]
