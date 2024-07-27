@@ -1,4 +1,4 @@
-" Plugin Loading
+ " Plugin Loading
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim' "Highlights lines
 Plug 'joshdick/onedark.vim' "The One Dark Theme
@@ -8,9 +8,8 @@ Plug 'junegunn/fzf.vim' "Fuzzy find plugin
 Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
 Plug 'mbbill/undotree' "Creates an undo tree
 Plug 'preservim/nerdtree' "File browser inside vim
-"Plug 'godlygeek/tabular' "Auto formatting
+Plug 'godlygeek/tabular' "Auto formatting
 Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
-"Plug 'wakatime/vim-wakatime' "Wakatime tracker
 Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
@@ -41,10 +40,11 @@ call plug#end()
 	set expandtab
 	set smartindent
 "Folding Settings
-"  set nofoldenable
+  set nofoldenable "in the past, left enabled
 	set foldcolumn=1
   set foldmethod=marker
   set foldmarker={,} 
+
   set nowrap
 	set smartcase
 	set noswapfile
@@ -54,9 +54,9 @@ call plug#end()
   set history=5000
 	set nocompatible
   set number relativenumber
-  " old themes one desert and habamax
   set background=dark
-  colorscheme onedark 
+  colorscheme onedark
+  " colorschheme=nord 
   set termguicolors
 	filetype plugin on
 	set encoding=utf-8
@@ -77,7 +77,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
   nnoremap <Leader>f :Files!<CR>
   nnoremap <Leader>h :History<CR>
-" nnoremap <Leader>l :Tabularize /
+  nnoremap <Leader>l :Tabularize /
  
 " General Shortcuts
 "  nnoremap S :%s//g<Left><Left> 
@@ -103,8 +103,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   let g:vim_markdown_no_extensions_in_markdown = 1
   let g:vim_markdown_conceal = 0
   let g:vim_markdown_override_foldtext = 0
-"  let g:vim_markdown_folding_disabled = 1
-  let g:vim_markdown_folding_disabled = 0
+  let g:vim_markdown_folding_disabled = 1
+"  let g:vim_markdown_folding_disabled = 0
   let g:vim_markdown_new_list_item_indent = 0
 
 " Markdown auto format tables
