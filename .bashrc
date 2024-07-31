@@ -130,7 +130,8 @@ gcomd() {
 lazyg() {
     git add .
     git commit -m "$1"
-    }
+    git push
+  }
 #informational commit history:
 alias gloga="git log --graph --color --decorate --oneline"
 
