@@ -119,9 +119,18 @@ alias jctl="journalctl -p 3 -xb"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/git_projects/_dotfiles --work-tree=$HOME"
 
 #add updated and save
-alias gsave="git commit -a -m \"$(date +'%m-%d-%y') save\""
-alias gsavedf="dotfiles commit -a -m \"$(date +'%m-%d-%y') save\""
-
+gcom() {
+    git add .
+    git commit -m "$1"
+    }
+gcomd() {
+    dotfiles add -u
+    dotfiles commit -m "$1"
+    }
+lazyg() {
+    git add .
+    git commit -m "$1"
+    }
 #informational commit history:
 alias gloga="git log --graph --color --decorate --oneline"
 

@@ -111,6 +111,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 " transparent bg
-" autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+if has("gui_running")
+    " GVim specific settings
+    autocmd vimenter * hi Normal 
+else
+    " Terminal Vim specific settings
+    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+endif
 
 
