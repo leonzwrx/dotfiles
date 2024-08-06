@@ -167,6 +167,8 @@ alias egrep='egrep --color=auto'
 #other useful aliases
 alias topmem='ps -eo pmem,pid,pcpu,comm= | sort -k1 -n -r | head -n 25'
 alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
+#termbin
+alias tb="nc termbin.com 9999"
 
 #local network SSH
 alias ssh-pihole='ssh leo@pihole.nilva.local'
