@@ -20,13 +20,13 @@
         },
         {
             "type": "cpu",
-            "key": "│ ├",
+            "key": "  ├",
             "showPeCoreCount": true,
             "keyColor": "green"
         },
         {
             "type": "memory",
-            "key": "│ └",
+            "key": "  └",
             "keyColor": "green"
         },
         {
@@ -39,17 +39,17 @@
         },
         {
             "type": "os",
-            "key": "│ ├",
+            "key": "  ├",
             "keyColor": "yellow"
         },
         {
             "type": "kernel",
-            "key": "│ ├",
+            "key": "  ├",
             "keyColor": "yellow"
         },
         {
             "type": "shell",
-            "key": "│ └",
+            "key": "  └",
             "keyColor": "yellow"
         },
         {
@@ -62,13 +62,13 @@
         },
         {
             "type": "command",
-            "key": "│ ├󰃰 OS Age ",
+            "key": "  ├󰃰 OS Age ",
             "keyColor": "magenta",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": "│ └󰥔 Uptime ",
+            "key": "  └󰥔 Uptime ",
             "keyColor": "magenta"
         },
         {
