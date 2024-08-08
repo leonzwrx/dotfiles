@@ -14,6 +14,7 @@ Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
 Plug 'jasonccox/vim-wayland-clipboard' "workaround for vim's Wayland issues. Use "+ prior to y or p commands
+Plug 'ap/vim-css-color' "color previews for CSS
 call plug#end()
 
 " Startup Settings

@@ -13,6 +13,7 @@ Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
 Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
+Plug 'ap/vim-css-color' "color previews
 call plug#end()
 
 " Startup Settings
