@@ -9,6 +9,7 @@
     "custom/weather",
     "custom/wlsunset", 
     "custom/help",
+    "idle_inhibitor",
     "custom/playerctl",
     "cava"
     ],
