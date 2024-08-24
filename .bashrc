@@ -170,9 +170,11 @@ alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
 #termbin
 alias tb="nc termbin.com 9999"
 
+#allow image previews with ranger (using kitty) in wayland
+alias ranger='env TERM=xterm-kitty ranger'
 
 #start cmus console music player with visualization
-alias start-music="terminator --layout=music"
+alias start-music='kitty --detach sh -c "kitty @ launch --type=window cmus; sleep 0.5; kitty @ launch --type=window cava; kitty @ set-layout vsplit"'
 
 #convert apt to nala
 apt() { 
