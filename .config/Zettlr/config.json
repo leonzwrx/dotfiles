@@ -1,21 +1,21 @@
 {
   "version": "3.2.0",
   "openPaths": [
-    "/home/leo/Downloads/20240904164821.md",
     "/home/leo/git_projects/homelab-wiki",
-    "/home/leo/Documents/Zettlr Tutorial"
+    "/home/leo/git_projects/linux-setup-scripts",
+    "/home/leo/git_projects/personal-toolbox"
   ],
   "openDirectory": "/home/leo/git_projects/homelab-wiki/general_linux_guides",
   "dialogPaths": {
     "askFileDialog": "/home/leo/git_projects/homelab-wiki/install_guides",
-    "askDirDialog": "/home/leo/Downloads",
+    "askDirDialog": "/home/leo/git_projects/linux-setup-scripts",
     "askLangFileDialog": ""
   },
   "window": {
     "nativeAppearance": false,
     "vibrancy": false,
     "sidebarVisible": true,
-    "currentSidebarTab": "relatedFiles",
+    "currentSidebarTab": "toc",
     "recentGlobalSearches": []
   },
   "attachmentExtensions": [
@@ -44,10 +44,10 @@
   ],
   "darkMode": true,
   "alwaysReloadFiles": true,
-  "autoDarkMode": "system",
+  "autoDarkMode": "off",
   "autoDarkModeStart": "21:00",
   "autoDarkModeEnd": "06:00",
-  "fileMeta": true,
+  "fileMeta": false,
   "fileMetaTime": "modtime",
   "sorting": "natural",
   "sortFoldersFirst": true,
@@ -64,7 +64,7 @@
     "cslStyle": "",
     "useBundledPandoc": true,
     "exportQmdWithQuarto": false,
-    "singleFileLastExporter": "html",
+    "singleFileLastExporter": "HTML to Markdown.yaml",
     "customCommands": []
   },
   "zkn": {
@@ -116,8 +116,8 @@
     "autoCorrect": {
       "active": true,
       "magicQuotes": {
-        "primary": "\"…\"",
-        "secondary": "'…'"
+        "primary": "«…»",
+        "secondary": "„…“"
       },
       "replacements": [
         {

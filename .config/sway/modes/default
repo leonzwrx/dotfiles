@@ -156,7 +156,8 @@ $bindsym $mod+question exec $help
 #######################################
 
 ## Launch // Web Browser ##
-$bindsym $mod+Mod1+b exec google-chrome-stable
+#$bindsym $mod+Mod1+b exec google-chrome-stable
+$bindsym $mod+Mod1+b exec "flatpak run com.brave.Browser"
 
 ## Launch // File Manager ##
 $bindsym $mod+Mod1+f exec $filer 

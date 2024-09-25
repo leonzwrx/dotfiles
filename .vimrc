@@ -99,6 +99,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   nnoremap <Leader>t :tabnew<CR>
   nnoremap <Leader>c :tabclose<CR>
 
+" Disable arrow keys in normal mode
+nnoremap <Up>    <Nop>
+nnoremap <Down>  <Nop>
+nnoremap <Left>  <Nop>
+nnoremap <Right> <Nop>
+
 " Markdown Edits
   let g:vim_markdown_autowrite = 1
   let g:vim_markdown_no_extensions_in_markdown = 1
