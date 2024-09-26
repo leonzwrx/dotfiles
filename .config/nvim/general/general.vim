@@ -1,24 +1,4 @@
- " Plugin Loading
-call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim' "Highlights lines
-Plug 'joshdick/onedark.vim' "The One Dark Theme
-Plug 'nordtheme/vim' "Nord Theme
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' "Fuzzy find plugin
-Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
-Plug 'mbbill/undotree' "Creates an undo tree
-Plug 'preservim/nerdtree' "File browser inside vim
-Plug 'godlygeek/tabular' "Auto formatting
-Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
-Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
-Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
-Plug '907th/vim-auto-save' "auto saves files as you edit
-Plug 'jasonccox/vim-wayland-clipboard' "workaround for vim's Wayland issues. Use "+ prior to y or p commands
-Plug 'ap/vim-css-color' "color previews for CSS
-call plug#end()
-
 " Startup Settings
-	syntax on
   let NERDTreeShowHidden=1
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
@@ -56,9 +36,6 @@ call plug#end()
 	set nocompatible
   set number relativenumber
   set background=dark
-  colorscheme onedark
-  " colorschheme=nord 
-  set termguicolors
 	filetype plugin on
 	set encoding=utf-8
 	set wildmenu
@@ -69,36 +46,13 @@ call plug#end()
   endif
 	set guifont=Ubuntu\ Mono\ Regular
 
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 
-" Plugin Shortcuts
-	map <Leader>n :NERDTreeToggle<CR>
-  map <Leader>g :Goyo<CR>
-  nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
-  nnoremap <Leader>f :Files!<CR>
-  nnoremap <Leader>h :History<CR>
-  nnoremap <Leader>l :Tabularize /
-
 " Persistent_undo
-	set undodir=~/.vim/undodir"
+	set undodir=~/.config/nvim/undodir"
 	set undofile
 	let g:undotree_WindowLayout = 2
-
-" Tabedit keybinds
-  nnoremap <Leader>1 1gt<CR>
-  nnoremap <Leader>2 2gt<CR>
-  nnoremap <Leader>3 3gt<CR>
-  nnoremap <Leader>4 4gt<CR>
-  nnoremap <Leader>5 5gt<CR>
-  nnoremap <Leader>t :tabnew<CR>
-  nnoremap <Leader>c :tabclose<CR>
-
-" Disable arrow keys in normal mode
-nnoremap <Up>    <Nop>
-nnoremap <Down>  <Nop>
-nnoremap <Left>  <Nop>
-nnoremap <Right> <Nop>
 
 " Markdown Edits
   let g:vim_markdown_autowrite = 1
@@ -106,11 +60,8 @@ nnoremap <Right> <Nop>
   let g:vim_markdown_conceal = 0
   let g:vim_markdown_override_foldtext = 0
   let g:vim_markdown_folding_disabled = 1
-"  let g:vim_markdown_folding_disabled = 0
+" let g:vim_markdown_folding_disabled = 0
   let g:vim_markdown_new_list_item_indent = 0
-
-" Markdown auto format tables
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 " transparent bg
 if has("gui_running")
@@ -120,5 +71,3 @@ else
     " Terminal Vim specific settings
     autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 endif
-
-

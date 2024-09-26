@@ -33,7 +33,7 @@ fi
 #export PAGER=most                                 # easy to read pager with scrolling
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export EDITOR=vim
+export EDITOR=nvim
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -135,7 +135,8 @@ lazyg() {
 #informational commit history:
 alias gloga="git log --graph --color --decorate --oneline"
 
-
+#neovim
+alias vim='nvim'
 #replace rm with trashcli
 alias rm='trash -v'
 #replace ls with lsd
