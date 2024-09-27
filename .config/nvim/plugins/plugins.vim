@@ -14,4 +14,5 @@ Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
 Plug 'ap/vim-css-color' "color previews for CSS
+Plug 'Raimondi/delimitMate' "automatic closing of quotes, parentheses, brackets, etc
 call plug#end()

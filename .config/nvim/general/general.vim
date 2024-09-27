@@ -44,7 +44,7 @@
 	if !has('gui_running')
 	  set t_Co=256
   endif
-	set guifont=Ubuntu\ Mono\ Regular
+	set guifont=Ubuntu\ Mono:h11
 
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
