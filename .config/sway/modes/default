@@ -33,7 +33,7 @@ $bindsym $mod+Shift+c reload
 $bindsym $mod+Shift+e exec nwg-bar -x
 
 ## Action // Lock the screen ##
-$bindsym $mod+l exec swaylock -c 550000
+$bindsym $mod+Mod1+l exec swaylock -c 550000
 
 # Media keys
 $bindsym --locked XF86AudioRaiseVolume exec $volume_up
@@ -60,21 +60,21 @@ $bindsym XF86ScreenSaver exec $lock
 #Moving around:
 
 ## Navigation // Move focus // $mod + ↑ ↓ ← → ##
-# $bindsym $mod+$left focus left
-# $bindsym $mod+$down focus down
-# $bindsym $mod+$up focus up
-# $bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
+$bindsym $mod+$left focus left
+$bindsym $mod+$down focus down
+$bindsym $mod+$up focus up
+$bindsym $mod+$right focus right
+#Or use $mod+[up|down|left|right]
 $bindsym $mod+Left focus left
 $bindsym $mod+Down focus down
 $bindsym $mod+Up focus up
 $bindsym $mod+Right focus right
 
 ## Navigation // Move focused window // $mod + Shift + ↑ ↓ ← → ##
-# $bindsym $mod+Shift+$left move left
-# $bindsym $mod+Shift+$down move down
-# $bindsym $mod+Shift+$up move up
-# $bindsym $mod+Shift+$right move right
+$bindsym $mod+Shift+$left move left
+$bindsym $mod+Shift+$down move down
+$bindsym $mod+Shift+$up move up
+$bindsym $mod+Shift+$right move right
 # Ditto, with arrow keys
 $bindsym $mod+Shift+Left move left
 $bindsym $mod+Shift+Down move down
@@ -162,8 +162,8 @@ $bindsym $mod+Mod1+b exec "flatpak run com.brave.Browser"
 ## Launch // File Manager ##
 $bindsym $mod+Mod1+f exec $filer 
 
-## Launch // GVim ##
-$bindsym $mod+Mod1+v exec gvim
+## Launch // Neovide ##
+$bindsym $mod+Mod1+v exec ~/Applications/neovide.appimage
 
 ## Launch // Galculator ##
 $bindsym $mod+Mod1+c exec galculator
