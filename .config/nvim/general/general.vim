@@ -63,11 +63,11 @@
 " let g:vim_markdown_folding_disabled = 0
   let g:vim_markdown_new_list_item_indent = 0
 
-" transparent bg
-if has("gui_running")
-    " GVim specific settings
-    autocmd vimenter * hi Normal 
-else
-    " Terminal Vim specific settings
-    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-endif
+"" transparent bg
+"if has("gui_running")
+"    " GVim specific settings
+"    autocmd vimenter * hi Normal 
+"else
+"    " Terminal Vim specific settings
+"    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+"endif
