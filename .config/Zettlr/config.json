@@ -5,7 +5,7 @@
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/systemd_custom_unit_files",
+  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides/truenas_screenshots",
   "dialogPaths": {
     "askFileDialog": "/home/leo/git_projects/homelab-wiki/install_guides",
     "askDirDialog": "/home/leo/git_projects/linux-setup-scripts",
