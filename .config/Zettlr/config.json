@@ -1,11 +1,11 @@
 {
-  "version": "3.2.0",
+  "version": "3.2.1",
   "openPaths": [
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/general_linux_guides",
+  "openDirectory": "/home/leo/git_projects/personal-toolbox/linux_productivity/vim_stuff",
   "dialogPaths": {
     "askFileDialog": "/home/leo/git_projects/homelab-wiki/install_guides",
     "askDirDialog": "/home/leo/git_projects/linux-setup-scripts",
@@ -17,6 +17,16 @@
     "sidebarVisible": true,
     "currentSidebarTab": "toc",
     "recentGlobalSearches": []
+  },
+  "ui": {
+    "fileManagerSplitSize": [
+      20,
+      80
+    ],
+    "editorSidebarSplitSize": [
+      85,
+      15
+    ]
   },
   "attachmentExtensions": [
     ".pdf",
