@@ -1,19 +1,11 @@
 {
-<<<<<<< HEAD
-  "version": "3.2.1",
-=======
   "version": "3.3.1",
->>>>>>> e4c256684cfb71ac5b644e8e231f0817fcfa2b88
   "openPaths": [
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
-<<<<<<< HEAD
-  "openDirectory": "/home/leo/git_projects/personal-toolbox/linux_productivity/vim_stuff",
-=======
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides/truenas_screenshots",
->>>>>>> e4c256684cfb71ac5b644e8e231f0817fcfa2b88
+  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides",
   "dialogPaths": {
     "askFileDialog": "/home/leo/git_projects/homelab-wiki/install_guides",
     "askDirDialog": "/home/leo/git_projects/linux-setup-scripts",
@@ -22,7 +14,7 @@
   "window": {
     "nativeAppearance": false,
     "vibrancy": false,
-    "sidebarVisible": true,
+    "sidebarVisible": false,
     "currentSidebarTab": "toc",
     "recentGlobalSearches": []
   },
@@ -32,13 +24,8 @@
       80
     ],
     "editorSidebarSplitSize": [
-<<<<<<< HEAD
-      85,
-      15
-=======
       80,
       20
->>>>>>> e4c256684cfb71ac5b644e8e231f0817fcfa2b88
     ]
   },
   "attachmentExtensions": [
