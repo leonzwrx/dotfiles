@@ -49,6 +49,9 @@
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 
+" Neovide extras
+  let g:neovide_cursor_vfx_mode="pixiedust"
+
 " Persistent_undo
 	set undodir=~/.config/nvim/undodir"
 	set undofile

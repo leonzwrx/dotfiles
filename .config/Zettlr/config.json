@@ -1,14 +1,15 @@
 {
-  "version": "3.3.1",
+  "version": "3.4.3",
   "openPaths": [
+    "/mnt/Data/websites/hiddenjewelstravel/content",
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides",
+  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides/assets",
   "dialogPaths": {
-    "askFileDialog": "/home/leo/git_projects/homelab-wiki/install_guides",
-    "askDirDialog": "/home/leo/git_projects/linux-setup-scripts",
+    "askFileDialog": "/home/leo/Downloads",
+    "askDirDialog": "/mnt/Data/websites/hiddenjewelstravel/content",
     "askLangFileDialog": ""
   },
   "window": {
@@ -20,8 +21,8 @@
   },
   "ui": {
     "fileManagerSplitSize": [
-      20,
-      80
+      30,
+      70
     ],
     "editorSidebarSplitSize": [
       80,

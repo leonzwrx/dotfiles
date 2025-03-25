@@ -1,5 +1,6 @@
 .config ~/.config
 Documents ~/Documents
-git_projects ~/git_projects
 gdrive ~/mnt/gdrive
+git_projects ~/git_projects
+hiddenjewelstravel /mnt/Data/websites/hiddenjewelstravel
 
