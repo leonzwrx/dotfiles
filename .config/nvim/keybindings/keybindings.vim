@@ -22,4 +22,4 @@
   nnoremap <Right> <Nop>
 
 " Toggle Markdown conceal
-  nnoremap <Leader>m :set conceallevel=<c-r>=&conceallevel == 0 ? 2 : 0<cr><cr
+  nnoremap <Leader>m :set conceallevel=<c-r>=&conceallevel == 0 ? 2 : 0<cr><cr>
