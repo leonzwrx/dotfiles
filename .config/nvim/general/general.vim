@@ -57,27 +57,17 @@
 	set undofile
 	let g:undotree_WindowLayout = 2
 
-" Markdown Conceal (preservim/vim-markdown)
-let g:vim_markdown_conceal = 1
-let g:vim_markdown_conceal_code_blocks = 0
-let g:vim_markdown_strikethrough = 1
+" ----- vim-pandoc Conceal Settings -----
+let g:pandoc#syntax#conceal#use = 1       " Enable conceal
+let g:pandoc#syntax#conceal#blacklist = ['codeblock_start', 'codeblock_delim'] " Keep ``` visible
 
 " Auto-toggle conceal on mode change
-augroup markdown_conceal
+augroup pandoc_conceal
   autocmd!
-  autocmd FileType markdown setlocal conceallevel=2
-  autocmd FileType markdown autocmd InsertEnter * setlocal conceallevel=0
-  autocmd FileType markdown autocmd InsertLeave * setlocal conceallevel=2
+  autocmd FileType markdown,pandoc setlocal conceallevel=2
+  autocmd FileType markdown,pandoc autocmd InsertEnter * setlocal conceallevel=0
+  autocmd FileType markdown,pandoc autocmd InsertLeave * setlocal conceallevel=2
 augroup END
 
-" Force visible conceal chars (if your theme hides them)
-hi! link Conceal Comment  " Make concealed chars visible as comments
-
-"" transparent bg
-"if has("gui_running")
-"    " GVim specific settings
-"    autocmd vimenter * hi Normal 
-"else
-"    " Terminal Vim specific settings
-"    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-"endif
+" Manual toggle with <leader>m (same as before)
+nnoremap <leader>m :set conceallevel=<c-r>=&conceallevel == 0 ? 2 : 0<cr><cr>

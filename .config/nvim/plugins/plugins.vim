@@ -9,7 +9,9 @@ Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
 Plug 'mbbill/undotree' "Creates an undo tree
 Plug 'preservim/nerdtree' "File browser inside vim
 Plug 'godlygeek/tabular' "Auto formatting
-Plug 'preservim/vim-markdown' " Corrected vim-markdown name
+" Plug 'preservim/vim-markdown' " Corrected vim-markdown name
+Plug 'vim-pandoc/vim-pandoc'          " Core plugin
+Plug 'vim-pandoc/vim-pandoc-syntax'   " Syntax/conceal rules
 Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
