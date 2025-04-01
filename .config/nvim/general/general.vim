@@ -57,14 +57,21 @@
 	set undofile
 	let g:undotree_WindowLayout = 2
 
-" Markdown Edits
-  let g:vim_markdown_autowrite = 1
-  let g:vim_markdown_no_extensions_in_markdown = 1
-  let g:vim_markdown_conceal = 0
-  let g:vim_markdown_override_foldtext = 0
-  let g:vim_markdown_folding_disabled = 1
-" let g:vim_markdown_folding_disabled = 0
-  let g:vim_markdown_new_list_item_indent = 0
+" Markdown Conceal (preservim/vim-markdown)
+let g:vim_markdown_conceal = 1
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_strikethrough = 1
+
+" Auto-toggle conceal on mode change
+augroup markdown_conceal
+  autocmd!
+  autocmd FileType markdown setlocal conceallevel=2
+  autocmd FileType markdown autocmd InsertEnter * setlocal conceallevel=0
+  autocmd FileType markdown autocmd InsertLeave * setlocal conceallevel=2
+augroup END
+
+" Force visible conceal chars (if your theme hides them)
+hi! link Conceal Comment  " Make concealed chars visible as comments
 
 "" transparent bg
 "if has("gui_running")

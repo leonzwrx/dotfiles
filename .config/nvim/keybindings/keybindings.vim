@@ -21,5 +21,5 @@
   nnoremap <Left>  <Nop>
   nnoremap <Right> <Nop>
 
-" Markdown auto format tables
-  inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+" Toggle Markdown conceal
+  nnoremap <Leader>m :set conceallevel=<c-r>=&conceallevel == 0 ? 2 : 0<cr><cr
