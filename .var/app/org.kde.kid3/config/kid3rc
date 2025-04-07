@@ -25,12 +25,12 @@ StandardTags=true
 CaseConversion=0
 EnableMaximumLength=false
 EnableValidation=true
-FormatWhileEditing=true
+FormatWhileEditing=false
 LocaleName=
 MaximumLength=255
 StrRepEnabled=true
-StrRepMapKeys=/,:,.,?,,*,",<,>,|,ä,ö,ü,Ä,Ö,Ü,ß,À,Á,Â,Ã,Å,Æ,Ç,È,É,Ê,Ë,Ì,Í,Î,Ï,Ð,Ñ,Ò,Ó,Ô,Õ,×,Ø,Ù,Ú,Û,Ý,à,á,â,ã,å,æ,ç,è,é,ê,ë,ì,í,î,ï,ð,ñ,ò,ó,ô,õ,ø,ù,ú,û,ý,ÿ
-StrRepMapValues=-,-,, ,,,'',-,-,-,ae,oe,ue,Ae,Oe,Ue,ss,A,A,A,A,A,AE,C,E,E,E,E,I,I,I,I,D,N,O,O,O,O,x,O,U,U,U,Y,a,a,a,a,a,ae,c,e,e,e,e,i,i,i,i,d,n,o,o,o,o,o,u,u,u,y,y
+StrRepMapKeys=/,:,.,?,*,",<,>,|,ä,ö,ü,Ä,Ö,Ü,ß,À,Á,Â,Ã,Å,Æ,Ç,È,É,Ê,Ë,Ì,Í,Î,Ï,Ð,Ñ,Ò,Ó,Ô,Õ,×,Ø,Ù,Ú,Û,Ý,à,á,â,ã,å,æ,ç,è,é,ê,ë,ì,í,î,ï,ð,ñ,ò,ó,ô,õ,ø,ù,ú,û,ý,ÿ
+StrRepMapValues=-,-,,,,'',-,-,-,ae,oe,ue,Ae,Oe,Ue,ss,A,A,A,A,A,AE,C,E,E,E,E,I,I,I,I,D,N,O,O,O,O,x,O,U,U,U,Y,a,a,a,a,a,ae,c,e,e,e,e,i,i,i,i,d,n,o,o,o,o,o,u,u,u,y,y
 UseForOtherFileNames=true
 
 [Files]
@@ -47,7 +47,7 @@ NameFilter=All Files (*)
 PreserveTime=false
 ShowHiddenFiles=false
 SortIgnoringPunctuation=false
-TextEncoding=System
+TextEncoding=ISO-8859-1
 
 [Freedb]
 CgiPath=/~cddb/cddb.cgi
@@ -67,12 +67,13 @@ HideV2=false
 HideV3=false
 PlayOnDoubleClick=false
 PlayToolBarVisible=true
+PreferredAudioOutput=
 SelectFileOnPlayEnabled=false
 
 [Import]
 DisabledPlugins=
 EnableTimeDifferenceCheck=true
-ImportDestination=2
+ImportDestination=0
 ImportFormatHeaders=,,,,%{artist}(\\\\S[^\\\\r\\\\n/]*\\\\S)\\\\s*/\\\\s*%{album}(\\\\S[^\\\\r\\\\n]*\\\\S)[\\\\r\\\\n]+\\\\s*tracks:\\\\s+\\\\d+.*year:\\\\s*%{year}([^\\\\r\\\\n\\\\t]*)?.*genre:\\\\s*%{genre}(\\\\S[^\\\\r\\\\n]*\\\\S)?[\\\\r\\\\n],<[^>]+>%{artist}([^<\\\\s][^\\\\r\\\\n/]*\\\\S)\\\\s*/\\\\s*%{album}(\\\\S[^\\\\r\\\\n]*[^\\\\s>])<[^>]+>[\\\\r\\\\n]+\\\\s*tracks:\\\\s+\\\\d+.*year:\\\\s*%{year}([^\\\\r\\\\n\\\\t]*)?.*genre:\\\\s*%{genre}(\\\\S[^\\\\r\\\\n>]*\\\\S)?<[^>]+>[\\\\r\\\\n],,,,
 ImportFormatIdx=0
 ImportFormatNames=CSV unquoted,CSV quoted,CSV more unquoted,CSV more quoted,freedb HTML text,freedb HTML source,Title,Track Title,Track Title Time,Custom Format
@@ -141,7 +142,7 @@ Server=musicbrainz.org
 StandardTags=true
 
 [Network]
-Browser=google-chrome
+Browser=google-chrome-stable
 Proxy=
 ProxyPassword=
 ProxyUserName=
@@ -161,11 +162,6 @@ UseFullPath=false
 UseSortTagField=false
 WriteInfo=false
 
-[RenameDirectory]
-DirFormatItems=%{artist} - %{album},%{artist} - %{"["year"] "}%{album},%{artist} - [%{max-year}] %{album},%{artist} - %{album}%{" ("year")"},%{artist}/%{album},%{artist}/%{"["year"] "}%{album},%{album},%{"["year"] "}%{album}
-DirFormatText=%{artist} - %{album}
-RenameDirectorySource=0
-
 [TagFormat]
 CaseConversion=4
 EnableMaximumLength=false
@@ -179,13 +175,13 @@ StrRepMapValues=\\0
 UseForOtherFileNames=true
 
 [Tags]
-CommentName=DESCRIPTION
+CommentName=COMMENT
 CustomFrames=
 CustomGenres=
-DisabledPlugins=Id3libMetadata
-EnableTotalNumberOfTracks=true
+DisabledPlugins=
+EnableTotalNumberOfTracks=false
 GenreNotNumeric=true
-ID3v2Version=1
+ID3v2Version=0
 LowercaseId3RiffChunk=false
 MarkOversizedPictures=false
 MarkStandardViolations=true
@@ -193,11 +189,11 @@ MarkTruncations=true
 MaximumPictureSize=131072
 OnlyCustomGenres=false
 PictureNameItem=0
-PluginOrder=Id3libMetadata,OggFlacMetadata,TaglibMetadata
+PluginOrder=OggFlacMetadata,TaglibMetadata
 QuickAccessFrameOrder=
 QuickAccessFrames=127
 RiffTrackName=IPRT
 StarRatingMapping=POPM\\,1\\,64\\,128\\,196\\,255,POPM.Windows Media Player 9 Series\\,1\\,64\\,128\\,196\\,255,POPM.traktor@native-instruments.de\\,51\\,102\\,153\\,204\\,255,WM/SharedUserRating\\,1\\,25\\,50\\,75\\,99,IRTD\\,20\\,40\\,60\\,80\\,100,rate\\,20\\,40\\,60\\,80\\,100,RATING\\,20\\,40\\,60\\,80\\,100
 TextEncoding=0
 TextEncodingV1=ISO-8859-1
-TrackNumberDigits=2
+TrackNumberDigits=1
