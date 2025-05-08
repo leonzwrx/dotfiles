@@ -11,7 +11,6 @@
   endif
  set mouse=a "Allows mouse usage inside vim. Great for noobs.
   set clipboard=unnamedplus "Remaps default copy paste to system clipboard
-  set go+=a                " Makes the Menu bar permanently visible in gVIM 
   set cursorline
   highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
 	set noerrorbells
