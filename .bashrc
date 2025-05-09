@@ -15,7 +15,7 @@
 #######################################################
 
 #launch fastfetch
-fastfetch --config $HOME/.config/fastfetch/config_compact.json
+# fastfetch --config $HOME/.config/fastfetch/config_compact.json
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
