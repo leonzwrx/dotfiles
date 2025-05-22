@@ -169,7 +169,7 @@ $bindsym $mod+Mod1+f exec $filer
 $bindsym $mod+Mod1+v exec ~/Applications/neovide.appimage
 
 ## Launch // Galculator ##
-$bindsym $mod+Mod1+c exec galculator
+$bindsym $mod+Mod1+c exec "flatpak run org.gnome.Calculator"
 
 # Passthru mode for wayvnc
 mode passthrough {
