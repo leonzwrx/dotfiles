@@ -6,7 +6,7 @@
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides",
+  "openDirectory": "/mnt/Data/websites/hiddenjewelstravel/content",
   "dialogPaths": {
     "askFileDialog": "/home/leo/Downloads",
     "askDirDialog": "/mnt/Data/websites/hiddenjewelstravel/content",
@@ -102,7 +102,7 @@
     "indentWithTabs": false,
     "fontSize": 18,
     "countChars": false,
-    "inputMode": "default",
+    "inputMode": "vim",
     "boldFormatting": "**",
     "italicFormatting": "_",
     "readabilityAlgorithm": "dale-chall",
