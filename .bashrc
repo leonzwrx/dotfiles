@@ -35,6 +35,7 @@ fi
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export EDITOR=nvim
+export BROWSER="flatpak run com.brave.Browser"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
