@@ -31,11 +31,12 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 ### EXPORT
-#export PAGER=most                                 # easy to read pager with scrolling
+#export PAGER=most                                # easy to read pager with scrolling
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export EDITOR=nvim
-export BROWSER="flatpak run com.brave.Browser"
+export BROWSER="flatpak run com.brave.Browser"    # this is for neomutt to open links
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -176,6 +177,9 @@ alias ranger='env TERM=xterm-kitty ranger'
 
 #start cmus console music player with visualization
 alias start-music='kitty --detach sh -c "kitty @ launch --type=window cmus; sleep 0.5; kitty @ launch --type=window cava; kitty @ set-layout vsplit"'
+
+#this is for mbsync / neomutt to source the correct config file location
+alias mbsync='mbsync -c ~/.config/mbsync/mbsyncrc'
 
 #convert apt to nala
 apt() { 
