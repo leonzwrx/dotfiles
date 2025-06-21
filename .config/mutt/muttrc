@@ -8,7 +8,10 @@ set smtp_authenticators = "login"
 ###custom configs to override /usr/share/mutt-wizard/mutt-wizard.muttrc
 ####
 set date_format="%m/%d/%y %I:%M%p"
-
+set sidebar_format = '%B %<N?(%N)>%* %S'
+set sidebar_width = 35
+#set status_format="---%f [Msgs:%m New:%n]---(%t)---" #minimal status bar
+set status_format="---%f [Msgs:%m New:%n Flag:%F %s %l]---(%t)---" #clean status bar
 #
 macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
 macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
