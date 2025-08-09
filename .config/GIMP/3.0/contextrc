@@ -1,0 +1,14 @@
+# GIMP user context
+
+(tool "gimp-eraser-tool")
+(paint-info "gimp-eraser")
+(brush "Wilber")
+(dynamics "Pressure Size")
+(mybrush "Standard")
+(pattern "Pine")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(font "Sans-serif")
+(tool-preset "Core Pointer")
+
+# end of user context
