@@ -34,6 +34,8 @@ fi
 #export PAGER=most                                # easy to read pager with scrolling
 export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
+#OPTIONAL for history timestamps:
+#HISTTIMEFORMAT="%Y-%m-%d %T "
 export EDITOR=nvim
 export BROWSER="flatpak run com.brave.Browser"    # this is for neomutt to open links
 
@@ -156,6 +158,9 @@ if command -v lsb_release >/dev/null; then
    	export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
   fi
 fi
+#set bat theme to Nord
+export BAT_THEME="Nord"
+
 #fix manpager formatting
 export MANROFFOPT="-c"
 
@@ -171,6 +176,8 @@ alias topmem='ps -eo pmem,pid,pcpu,comm= | sort -k1 -n -r | head -n 25'
 alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
 #termbin
 alias tb="nc termbin.com 9999"
+#speed test
+alias st="curl -s speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3"
 
 #allow image previews with ranger (using kitty) in wayland
 alias ranger='env TERM=xterm-kitty ranger'
