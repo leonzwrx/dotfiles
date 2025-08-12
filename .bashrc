@@ -16,7 +16,10 @@
 # UPDATED: 06.17.2025
 #
 # launch fastfetch
-# fastfetch --config $HOME/.config/fastfetch/config_compact.json
+# This will only run fastfetch when the shell is interactive.
+if [[ $- == *i* ]]; then
+    fastfetch --config $HOME/.config/fastfetch/config_compact.json
+fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

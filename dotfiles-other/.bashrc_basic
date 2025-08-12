@@ -18,6 +18,14 @@
 # SOURCED ALIASES and SCRIPTS
 #######################################################
 
+# UPDATED 08.12.2025
+#
+# launch fastfetch
+# This will only run fastfetch when the shell is interactive.
+if [[ $- == *i* ]]; then
+    fastfetch --config $HOME/.config/fastfetch/config_compact.json
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -104,6 +112,10 @@ alias egrep='egrep --color=auto'
 #other useful aliases
 alias topmem='ps -eo pmem,pid,pcpu,comm= | sort -k1 -n -r | head -n 25'
 alias topcpu='ps -eo pcpu,pid,pmem,comm= | sort -k1 -n -r | head -n 25'
+#termbin
+alias tb="nc termbin.com 9999"
+#speed test
+alias st="curl -s speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3"
 
 # Install Starship - curl -sS https://starship.rs/install.sh | sh
 
