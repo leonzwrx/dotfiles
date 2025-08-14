@@ -1,26 +1,26 @@
 [
  {
-   "label": "Lock this bitch",
+   "label": "Lock",
    "exec": "swaymsg exec ~/.config/swaylock/lock.sh",
    "icon": "system-lock-screen"
  },
  {
-   "label": "Log out of this bitch",
+   "label": "Log out",
    "exec": "swaymsg exit",
    "icon": "system-log-out"
  },
  {
-   "label": "Suspend this bitch",
+   "label": "Suspend",
    "exec": "systemctl suspend",
    "icon": "system-suspend"
  },
  {
-   "label": "Reboot this bitch",
+   "label": "Reboot",
    "exec": "systemctl reboot",
    "icon": "system-reboot"
  },
  {
-   "label": "Shutdown this bitch",
+   "label": "Shutdown",
    "exec": "systemctl -i poweroff",
    "icon": "system-shutdown"
  }

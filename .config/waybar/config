@@ -23,7 +23,8 @@
     "temperature",
     "pulseaudio",
     "custom/clock",
-    "tray"
+    "tray",
+    "custom/power"
     ],
     
     "sway/workspaces": {
@@ -171,7 +172,12 @@
         "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
         "signal": 5
     },
-    
+   
+    "custom/power": {
+        "format": "  ⏻  ",
+        "on-click": "nwg-bar -x"
+    },
+
    "custom/weather": {
     "format": "{}°",
     "tooltip": true,
