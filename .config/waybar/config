@@ -24,7 +24,7 @@
     "pulseaudio",
     "custom/clock",
     "tray",
-    "custom/power"
+    "custom/power",
     ],
     
     "sway/workspaces": {
@@ -66,13 +66,13 @@
        //"format": "{icon}  {volume}% {format_source}",
        "format": "{icon}  {volume}%",
        "format-bluetooth": "{icon} {volume}%",
-       "format-muted": " {format_source}",
+       "format-muted": " {format_source}",
        "format-source": "  {volume}%",
-       "format-source-muted": "",
+       "format-source-muted": "",
        "format-icons": {
            "headphone": "",
-           "headset": "",
-           "default": ["", "", ""]
+           "headset": "󰋎",
+           "default": ["󰕿", "󰖀", "󰖀"]
        },
        //"tooltip-format": "{icon}  {volume}% {format_source}",
        "tooltip-format": "{icon}  {volume}%",
