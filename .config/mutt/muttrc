@@ -1,7 +1,5 @@
 # vim: filetype=neomuttrc
 source /usr/share/mutt-wizard/mutt-wizard.muttrc
-source /home/leo/.config/mutt/accounts/leonid.nilva@gmail.com.muttrc
-macro index,pager i1 '<sync-mailbox><enter-command>source /home/leo/.config/mutt/accounts/leonid.nilva@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to leonid.nilva@gmail.com"
 set smtp_authenticators = "login"
 
 ### 
@@ -32,3 +30,6 @@ macro index,pager Cs ";<copy-message>=[Gmail]/Sent Mail<enter>" "copy mail to se
 macro index,pager ga "<change-folder>=Archive<enter>" "go to archive"
 macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
 macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"
+source /home/leo/.config/mutt/accounts/leonid.nilva@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/leo/.config/mutt/accounts/leonid.nilva@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to leonid.nilva@gmail.com"
+set header_cache_backend = "lmdb"

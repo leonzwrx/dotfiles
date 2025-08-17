@@ -1,4 +1,6 @@
 
+
+
 IMAPStore leonid.nilva@gmail.com-remote
 Host imap.gmail.com
 Port 993
@@ -15,12 +17,11 @@ Inbox /home/leo/.local/share/mail/leonid.nilva@gmail.com/INBOX
 
 Channel leonid.nilva@gmail.com
 Expunge Both
-Master :leonid.nilva@gmail.com-remote:
-Slave :leonid.nilva@gmail.com-local:
-Patterns * !"[Gmail]/All Mail"
+Far :leonid.nilva@gmail.com-remote:
+Near :leonid.nilva@gmail.com-local:
+Patterns * !"[Gmail]/All Mail" !"*fts-flatcurve*" !"*virtual*"
 Create Both
 SyncState *
 MaxMessages 0
 ExpireUnread no
 # End profile
-
