@@ -1,6 +1,10 @@
 git_projects
 
 #ignore some sway files
-~/.config/sway/outputs
-~/.config/sway/workspaces
-~/.config/nvim/autoload
+.config/sway/outputs
+.config/sway/workspaces
+
+#ignore other dotfile locations
+.config/nvim/autoload
+.config/nvim/undodir
+.config/ranger/__pycache__
