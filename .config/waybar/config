@@ -45,7 +45,7 @@
     },
     
     "sway/language": {
-        "format": "   {}",
+        "format": "    {}",
         "min-length": 5,
         "tooltip": false,
         "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
@@ -179,7 +179,7 @@
     },
 
    "custom/weather": {
-    "format": "{}°",
+    "format": "{} °",
     "tooltip": true,
     "interval": 1800,
     "exec": "wttrbar --fahrenheit --mph --location Centennial",
@@ -212,8 +212,8 @@
   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "  ",
+            "deactivated": " "
         }
     },
         "custom/wlsunset": {
@@ -223,8 +223,8 @@
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
-            "on": "    ",
-            "off": "    "
+            "on": "  ",
+            "off": "  "
         },
         "exec": "$HOME/.config/sway/scripts/sunset.sh",
         "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
@@ -233,7 +233,7 @@
     },
 
     "custom/help": {
-        "format": "      ",
+        "format": "  ",
         "on-click": "$HOME/.config/sway/scripts/help.sh --toggle",
         "tooltip": "false"
     },
