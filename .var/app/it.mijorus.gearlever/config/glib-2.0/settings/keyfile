@@ -1,0 +1,4 @@
+[it/mijorus/gearlever]
+first-run=false
+appimages-default-folder='/home/leo/Applications'
+simple-file-name-for-apps=true
