@@ -15,7 +15,8 @@
     ],
     "modules-right": [
 	  "sway/language",
-	  "backlight",
+	  "network",
+    "backlight",
 	//"power-profiles-daemon",//Commenting out for now since cpu-autofreq is used
     "cpu",
     "memory",
@@ -95,6 +96,18 @@
     "hide_on_silence": true,
     "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     "actions": {"on-click-right": "mode"}
+    },    
+    
+    "network": {
+        "format-wifi": "  {bandwidthDownBytes}↓ {bandwidthUpBytes}↑",
+        "format-ethernet": " {bandwidthDownBytes}↓ {bandwidthUpBytes}↑",
+        "format-disconnected": " Offline",
+        "format-icons": [""],
+        "tooltip": true,
+        "tooltip-format-wifi": "{ifname} ({essid}) {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click-right": "nm-connection-editor"
     },    
 
     "battery": {
