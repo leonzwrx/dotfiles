@@ -1,49 +1,153 @@
-/* Make Waybar background semi-transparent */
+/*
+ * Waybar Style - Nord Theme Inspired
+ *
+ * This stylesheet uses the Nord color palette to create a clean,
+ * modern look with rounded corners and subtle gradients.
+ */
+
+/* Nord Colors */
+@define-color nord0 #2E3440; /* Polar Night (Darkest) */
+@define-color nord3 #4C566A; /* Polar Night (Lighter) */
+@define-color nord4 #D8DEE9; /* Snow Storm (Brightest) */
+@define-color nord7 #8FBCBB; /* Frost */
+@define-color nord8 #88C0D0; /* Frost */
+@define-color nord10 #81A1C1; /* Frost */
+@define-color nord13 #BF616A; /* Aurora (Red) */
+@define-color nord14 #A3BE8C; /* Aurora (Green) */
+@define-color nord15 #B48EAD; /* Aurora (Purple) */
+
+
+/* -----------------------------------------------------------------------------
+ * Global Waybar Container
+ * -------------------------------------------------------------------------- */
+
 #waybar {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #000000;
+    background-color: transparent;
+    border: 1px solid rgba(216, 222, 233, 0.1); /* Subtle, semi-transparent border */
+    border-radius: 12px;
+    font-family: "Fira Code", sans-serif;
+    font-size: 14px;
 }
 
-/* Icon modules */
-#custom-clock,
+/* -----------------------------------------------------------------------------
+ * General Module Styling
+ * -------------------------------------------------------------------------- */
+
+/* Most modules share these properties for a consistent look. */
+#modules-left,
+#modules-right,
+#modules-center {
+    background-color: @nord0;
+    margin: 4px;
+    border-radius: 8px;
+    padding: 0px 4px;
+    border: 1px solid @nord3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* -----------------------------------------------------------------------------
+ * Individual Module Styling
+ * -------------------------------------------------------------------------- */
+
+/* Standard padding for most modules */
 #custom-menu,
+#sway-workspaces,
+#sway-window,
+#custom-clock,
 #custom-playerctl,
+#custom-wf-recorder,
+#custom-weather,
+#custom-wlsunset,
+#custom-help,
 #cpu,
 #memory,
 #battery,
 #temperature,
-#network,
-#cava
 #pulseaudio,
-#tray,
-#mode,
-#idle_inhibitor {
-    padding: 0 6px; /* Adjusted padding */
-    margin: 0 4px;
+#idle_inhibitor,
+#sway-mode,
+#sway-language,
+#backlight,
+#tray {
+    color: @nord4;
+    padding: 0 10px;
 }
 
-/* Bottom borders */
-#custom-clock,
-#custom-menu,
-#custom-playerctl,
-#cpu,
-#memory,
-#battery,
-#temperature,
-#network,
-#pulseaudio,
-#tray,
-#mode,
-#idle_inhibitor {
-    border-bottom: 3px solid @theme_selected_bg_color;
+/* -----------------------------------------------------------------------------
+ * Power Button Styling
+ * -------------------------------------------------------------------------- */
+
+#custom-power {
+    /* Base style for the power button - Adjusted for a better fit */
+    padding: 0 8px; /* Reduced padding */
+    margin: 4px; /* Matches other module margins */
+    background-color: @nord13; /* Red color from Nord palette */
+    border: 1px solid @nord13;
+    border-radius: 8px;
+    font-size: 14px; /* Reverts to standard font size */
+    color: @nord4;
+    transition: all 0.2s ease-in-out;
 }
 
-/* CPU, memory, battery, and pulseaudio specific styling */
-#cpu,
-#memory,
-#battery,
-#pulseaudio {
-    padding-left: 8px; /* Adjusted padding */
-    padding-right: 8px; /* Adjusted padding */
+#custom-power:hover {
+    /* Hover effect */
+    background-color: @nord13;
+    color: @nord0;
 }
 
+/* -----------------------------------------------------------------------------
+ * State-based Styling (colors for module states)
+ * -------------------------------------------------------------------------- */
+
+#cpu.critical {
+    color: @nord13;
+}
+
+#battery.critical {
+    color: @nord13;
+}
+
+#battery.charging {
+    color: @nord14;
+}
+
+#temperature.critical {
+    color: @nord13;
+}
+
+/* Playerctl styling for icons on media playback states */
+#custom-playerctl.paused {
+    color: @nord15;
+}
+
+#custom-playerctl.playing {
+    color: @nord14;
+}
+
+/* Idle Inhibitor styling */
+#idle_inhibitor.activated {
+    color: @nord14;
+}
+
+#idle_inhibitor.deactivated {
+    color: @nord13;
+}
+
+/* Styling for sway workspaces */
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @nord4;
+}
+
+#workspaces button.focused {
+    background-color: @nord10;
+    color: @nord0;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    background-color: @nord13;
+    color: @nord0;
+    border-radius: 8px;
+}
