@@ -23,7 +23,7 @@
     "battery",
     "temperature",
     "pulseaudio",
-    "custom/clock",
+    "clock",
     "tray",
     "custom/power",
     ],
@@ -32,7 +32,6 @@
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name}: {icon}",
-    // "persistent_workspaces": ["1", "2", "3", "4", "5"],// persistent stuff doesn't seem to work just yet
     "format-icons": {
         "1": " ",
         "2": " ",
@@ -64,7 +63,6 @@
     },
 
     "pulseaudio": {
-       //"format": "{icon}  {volume}% {format_source}",
        "format": "{icon}  {volume}%",
        "format-bluetooth": "{icon} {volume}%",
        "format-muted": " {format_source}",
@@ -99,16 +97,18 @@
     },    
     
     "network": {
-        "format-wifi": "  {bandwidthDownBytes}↓ {bandwidthUpBytes}↑",
-        "format-ethernet": " {bandwidthDownBytes}↓ {bandwidthUpBytes}↑",
-        "format-disconnected": " Offline",
-        "format-icons": [""],
-        "tooltip": true,
-        "tooltip-format-wifi": "{ifname} ({essid}) {signalStrength}%",
-        "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click-right": "nm-connection-editor"
-    },    
+       "format-wifi": " ({signalStrength}%)",
+       "format-ethernet": "",
+       "format-disconnected": "",
+       "tooltip-format": "{ifname} ({essid}): {ipaddr}",
+       "tooltip-format": "{icon} {ifname}: {ipaddr}",
+       "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}",
+       "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}",
+       "tooltip-format-disconnected": "{icon} disconnected",
+       "tooltip-format-disabled": "{icon} disabled",
+       "on-click": "swaymsg exec \\$flock \\$term_float nmtui connect",
+       "on-click-right": "swaymsg exec \\$flock \\$term_float nmtui edit"
+    }, 
 
     "battery": {
         "bat-compatibility":true,
@@ -131,8 +131,10 @@
        "tooltip": false,
     },
     
-    "custom/clock": {
-        "exec": "echo ''$(date +'%H:%M | %e %b %Y')''",
+    "clock": {
+        "format": "{:%e %b %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:%d.%m.%Y %H:%M}",
         "interval": 5,
         "on-click": "swaymsg exec \\$calendar"
     },
@@ -191,7 +193,39 @@
         "on-click": "nwg-bar -x"
     },
 
-   "custom/weather": {
+    // This avoids using wttr but also isn't as customizable (not sure about units)
+    //
+    //"custom/weather": {
+    //"icon-size": 42,
+    //"format": "{icon} {}",
+    //"tooltip": true,
+    //"interval": 3600,
+    //"exec": "$HOME/.config/sway/scripts/weather.py",
+    //"return-type": "json",
+    //"format-icons": {
+    //   "Unknown": "✨",
+    //   "Cloudy": "",
+    //   "Fog": "🌫",
+    //   "HeavyRain": "🌧",
+    //   "HeavyShowers": "🌧",
+    //   "HeavySnow": "❄️",
+    //   "HeavySnowShowers": "❄️",
+    //   "LightRain": "🌦",
+    //   "LightShowers": "🌦",
+    //   "LightSleet": "🌧",
+    //   "LightSleetShowers": "🌧",
+    //   "LightSnow": "🌨",
+    //   "LightSnowShowers": "🌨",
+    //   "PartlyCloudy": "⛅️",
+    //   "Sunny": "☀️",
+    //   "ThunderyHeavyRain": "🌩",
+    //   "ThunderyShowers": "⛈",
+    //   "ThunderySnowShowers": "⛈",
+    //   "VeryCloudy": ""
+    //  
+    //},
+
+    "custom/weather": {
     "format": "{}°",
     "tooltip": true,
     "interval": 1800,
@@ -211,17 +245,21 @@
         "format": "{percent}% {icon}",
         "format-icons": [" 🌑 ", " 🌘 ", " 🌗 ", " 🌖 ", " 🌕 "]
     },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
+    
+    //  Commenting out for now since cpu-autofreq is used
+    //
+    // "power-profiles-daemon": {
+    //  "format": "{icon}",
+    //  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    //  "tooltip": true,
+    //  "format-icons": {
+    //    "default": "",
+    //    "performance": "",
+    //    "balanced": "",
+    //    "power-saver": ""
+    //  }
+    // },
+
   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -229,18 +267,18 @@
             "deactivated": ""
         }
     },
-        "custom/wlsunset": {
+    
+    "custom/wlsunset": {
         "interval": "once",
         "tooltip": true,
-        "tooltip-format": "{tooltip}",
         "return-type": "json",
         "format": "{icon}",
         "format-icons": {
             "on": "",
             "off": ""
         },
-        "exec": "$HOME/.config/sway/scripts/sunset.sh",
-        "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec": "fallback_latitude=39.65562 fallback_longitude=-104.7866 latitude= longitude= $HOME/.config/sway/scripts/sunset.sh",
+        "on-click": "$HOME/.config/sway/scripts/sunset.sh toggle",
         "exec-if": "$HOME/.config/sway/scripts/sunset.sh check",
         "signal": 6
     },
