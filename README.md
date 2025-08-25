@@ -1,6 +1,13 @@
-
+```bash
+ _     _____ ___  _   _ _____
+| |   | ____/ _ \| \ | |__  /
+| |   |  _|| | | |  \| | / / 
+| |___| |__| |_| | |\  |/ /_ 
+|_____|_____\___/|_| \_/____|
+                             
+```                             
 # dotfiles
-
+![fedora_nord.png](./dotfiles-other/fedora_nord.png)
 ## Purpose:
 
 1. As a place to point viewers who ask me for my configs.

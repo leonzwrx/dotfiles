@@ -1,15 +1,17 @@
 {
-  "version": "3.6.0",
+  "version": "3.4.3",
   "openPaths": [
     "/mnt/Data/websites/hiddenjewelstravel/content",
+    "/home/leo/mnt/gdrive/Temp/rd_by_rd.md",
+    "/home/leo/README.md",
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
   "openDirectory": "/home/leo/git_projects/linux-setup-scripts/resources",
   "dialogPaths": {
-    "askFileDialog": "/home/leo/Downloads",
-    "askDirDialog": "/mnt/Data/websites/hiddenjewelstravel/content",
+    "askFileDialog": "/home/leo",
+    "askDirDialog": "/home/leo/dotfiles-other",
     "askLangFileDialog": ""
   },
   "window": {
