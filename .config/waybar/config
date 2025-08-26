@@ -96,19 +96,16 @@
     "actions": {"on-click-right": "mode"}
     },    
     
-    "network": {
-       "format-wifi": " ({signalStrength}%)",
-       "format-ethernet": "",
-       "format-disconnected": "",
-       "tooltip-format": "{ifname} ({essid}): {ipaddr}",
-       "tooltip-format": "{icon} {ifname}: {ipaddr}",
-       "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}",
-       "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}",
-       "tooltip-format-disconnected": "{icon} disconnected",
-       "tooltip-format-disabled": "{icon} disabled",
-       "on-click": "swaymsg exec \\$flock \\$term_float nmtui connect",
-       "on-click-right": "swaymsg exec \\$flock \\$term_float nmtui edit"
-    }, 
+   "network": {
+		  "format": "󰤭 Off",
+		  "format-wifi": "{essid} ({signalStrength}%)",
+		  "format-ethernet": "<span foreground='#b48ead'>󰈀</span>",
+		  "format-disconnected": "󰤭 Disconnected",
+		  "tooltip-format": "{ifname} via {gwaddr} ",
+		  "tooltip-format-wifi": "{essid}({signalStrength}%)  ",
+		  "tooltip-format-ethernet": "󰈀 {ifname}",
+		  "tooltip-format-disconnected": "Disconnected"
+  },
 
     "battery": {
         "bat-compatibility":true,
