@@ -1,16 +1,23 @@
 {
-  "version": "3.6.0",
+  "version": "3.4.3",
   "openPaths": [
     "/home/leo/mnt/gdrive/Temp/rd_by_rd.md",
     "/mnt/Data/websites/hiddenjewelstravel/content",
+    "/home/leo/mnt/gdrive/Temp/rd_by_rd.md",
+    "/home/leo/README.md",
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox"
   ],
   "openDirectory": "/home/leo/git_projects/linux-setup-scripts/assets",
   "dialogPaths": {
+<<<<<<< HEAD
     "askFileDialog": "/home/leo/mnt/gdrive/Temp",
     "askDirDialog": "/mnt/Data/websites/hiddenjewelstravel/content",
+=======
+    "askFileDialog": "/home/leo",
+    "askDirDialog": "/home/leo/dotfiles-other",
+>>>>>>> b15b37e361e7e94e1d89fe60bb2dce22d94e6f8a
     "askLangFileDialog": ""
   },
   "window": {
