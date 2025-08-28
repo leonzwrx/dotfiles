@@ -1,0 +1,38 @@
+# A dark, clean background color
+color=000000
+
+# This uses the current desktop wallpaper
+image=$HOME/Backgrounds/Wide/linux-tux.png
+
+# Text and indicator colors
+line-color=6a6a6a
+ring-color=d8dee9
+inside-color=2e3440
+text-color=d8dee9
+
+# Status messages
+# The font you use for GUI apps
+font=Noto Sans
+# A custom message to display
+text-caps-lock-color=ebcb8b
+text-caps-lock-text=Caps Lock Is On
+
+# Visual feedback for keypresses and authentication status
+key-hl-color=88c0d0
+ring-ver-color=a3be8c
+inside-ver-color=3d4a4d
+text-ver-color=a3be8c
+ring-wrong-color=bf616a
+inside-wrong-color=4f3c3d
+text-wrong-color=bf616a
+
+# Custom settings
+show-keyboard-layout
+show-failed-attempts
+ignore-empty-password
+indicator-caps-lock
+indicator-idle-visible
+
+# Enable time and date display
+time-str=%H:%M
+date-str=%a, %b %e
