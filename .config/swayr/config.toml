@@ -1,35 +1,67 @@
+#[menu]
+#executable = 'wofi'
+#args = [
+#    '--show=dmenu',
+#    '--define=layer=overlay',
+#    '--allow-markup',
+#    '--allow-images',
+#    '--insensitive',
+#    '--cache-file=/dev/null',
+#    '--parse-search',
+#    '--height=40%',
+#    '--prompt={prompt}',
+#]
+
 [menu]
-executable = 'wofi'
+executable = "rofi"
 args = [
-    '--show=dmenu',
-    '--define=layer=overlay',
-    '--allow-markup',
-    '--allow-images',
-    '--insensitive',
-    '--cache-file=/dev/null',
-    '--parse-search',
-    '--height=40%',
-    '--prompt={prompt}',
+    "-dmenu",
+    "-markup-rows",
+    "-show-icons",
+    "-no-case-sensitive",
+    "-l 20",
+    "-p",
+    "{prompt}",
+    "-theme",
+    "fancy"
 ]
 
 [format]
-output_format = '{indent}<b>Output {name}</b>    <span alpha=\"20000\">({id})</span>'
-workspace_format = '{indent}<b>Workspace {name} [{layout}]</b>    <span alpha="20000">({id})</span>'
-container_format = '{indent}<b>Container [{layout}]</b> on workspace {workspace_name} <i>{marks}</i>    <span alpha="20000">({id})</span>'
-window_format = 'img:{app_icon}:text:{indent}<i>{app_name}</i> \u2014 {urgency_start}<b>\u201c{title}\u201d</b>{urgency_end} on workspace {workspace_name} <i>{marks}</i>    <span alpha="20000">({id})</span>'
-indent = '    '
+output_format = '{indent}<b>Output {name}</b>    <span alpha="20000">({id})</span>'
+workspace_format = '{indent}<b>Workspace {name} [{layout}]</b>    <span alpha="20000">({id})</span>'
+container_format = '{indent}<b>Container [{layout}]</b> on workspace {workspace_name} <i>{marks}</i>    <span alpha="20000">({id})</span>'
+window_format = "{app_name}\u0000icon\u001f{app_icon}\u0000text\u001f{indent}<i>{app_name}</i> \u2014 {urgency_start}<b>\u201c{title}\u201d</b>{urgency_end} on workspace {workspace_name} <i>{marks}</i>    <span alpha=\"20000\">({id})</span>"
+indent = '    '
 urgency_start = '<span background="darkred" foreground="yellow">'
 urgency_end = '</span>'
 html_escape = true
+fallback_icon = "/usr/share/icons/Adwaita/scalable/mimetypes/application-x-generic.svg" # A generic, known-to-exist icon for those icons that don't seem to work
 icon_dirs = [
+    # Papirus-Dark (your preferred theme)
     '/usr/share/icons/Papirus-Dark/48x48/apps',
+    '/usr/share/icons/Papirus-Dark/scalable/apps',
+
+    # Regular Papirus, for icons not in the dark theme
+    '/usr/share/icons/Papirus/16x16/apps',
+    '/usr/share/icons/Papirus/22x22/apps',
+    '/usr/share/icons/Papirus/24x24/apps',
+    '/usr/share/icons/Papirus/32x32/apps',
+    '/usr/share/icons/Papirus/48x48/apps',
+    '/usr/share/icons/Papirus/64x64/apps',
+    '/usr/share/icons/Papirus/scalable/apps',
+
+    # Hicolor and Adwaita, for fallbacks
     '/usr/share/icons/hicolor/scalable/apps',
     '/usr/share/icons/hicolor/64x64/apps',
     '/usr/share/icons/hicolor/48x48/apps',
     '/usr/share/icons/hicolor/128x128/apps',
     '/usr/share/icons/hicolor/apps',
+
+    # Adwaita fallbacks
     '/usr/share/icons/Adwaita/64x64/apps',
     '/usr/share/icons/Adwaita/48x48/apps',
+
+    # General pixmaps
     '/usr/share/pixmaps'
 ]
 
