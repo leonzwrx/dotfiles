@@ -28,9 +28,3 @@ include ~/.config/sway/workspaces
 
 # Azote for backgrounds
 exec ~/.azotebg
-
-# Status Bar:
-
-bar {
-   swaybar_command waybar
-}
