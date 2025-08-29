@@ -1,25 +1,28 @@
-# Dim screen after 4 minutes of inactivity
-timeout 240 'brightnessctl -s && brightnessctl set 10' resume 'brightnessctl -r'
+# --------------------------
+# Swayidle universal config
+# --------------------------
 
-# Power off the screen after 12.5 minutes of inactivity
-timeout 750 '$HOME/.config/sway/scripts/kbd-backlight.sh off && swaymsg "output * power off"' resume '$HOME/.config/sway/scripts/kbd-backlight.sh on && swaymsg "output * power on"'
+# Laptop-specific: Dim screen after 4 minutes of inactivity
+timeout 240 '$HOME/.config/sway/scripts/kbd-backlight.sh off' \
+        resume '$HOME/.config/sway/scripts/kbd-backlight.sh on'
 
-# Lock rule for laptop: Locks after 10 minutes.
-# (This means the screen locks, and then turns off 2.5 minutes later)
+# Lock rule for laptop: Locks after 10 minutes (battery) 
+# Only applies if BAT0 exists
 timeout 600 '[ -d /sys/class/power_supply/BAT0 ] && $HOME/.config/sway/scripts/lock.sh'
 
-# Lock rule for desktop: Locks after 30 minutes.
-# (The screen will turn off after 12.5 minutes)
+# Lock rule for desktop: Locks after 30 minutes
+# Screen stays on (no dim/power off)
 timeout 1800 '$HOME/.config/sway/scripts/lock.sh'
 
-# Suspend the system after 15 minutes on battery
+# Suspend the system after 15 minutes on battery (laptop)
 timeout 900 '[ "$(acpi -b | grep Discharging)" != "" ] && systemctl suspend'
 
-# Suspend the system after 60 minutes on AC power
+# Suspend the system after 60 minutes on AC power (laptop)
 timeout 3600 '[ "$(acpi -b | grep Discharging)" = "" ] && systemctl suspend'
 
 # Before the system suspends: pause media and lock the screen
 before-sleep 'playerctl pause && $HOME/.config/sway/scripts/lock.sh && sleep 2'
 
-# After the system resumes: turn everything back on and restore brightness
-after-resume '$HOME/.config/sway/scripts/kbd-backlight.sh on && swaymsg "output * power on" && brightnessctl -r'
+# After the system resumes: restore backlight if available and power on outputs
+after-resume '$HOME/.config/sway/scripts/kbd-backlight.sh on && swaymsg "output * power on"'
+

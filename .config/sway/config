@@ -29,6 +29,10 @@ include ~/.config/sway/workspaces
 # Azote for backgrounds
 exec ~/.azotebg
 
+#Trying this so that any child service (like swayidle.service) inherits the same WAYLAND_DISPLAY that sway exported.
+exec systemctl --user import-environment \
+    DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_RUNTIME_DIR
+
 # Status Bar:
 
 bar {
