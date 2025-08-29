@@ -1,18 +1,20 @@
-#!/usr/bin/env sh
-# updated to use correct devices
 
+#!/usr/bin/env sh
 set -x
 
-# Detect backlight device
-BACKLIGHT_DEVICE=$(brightnessctl --list | grep -E 'kbd_backlight|backlight' | awk '{print $2}')
+# Only try if a backlight device exists
+BACKLIGHT_DEVICE=$(brightnessctl --list | grep -E 'kbd_backlight|intel_backlight' | awk '{print $2}')
 
 if [ -n "$BACKLIGHT_DEVICE" ]; then
-    case $1 in
+    case "$1" in
         on)
             brightnessctl -r -d "$BACKLIGHT_DEVICE"
             ;;
         off)
             brightnessctl -s -d "$BACKLIGHT_DEVICE" && brightnessctl -d "$BACKLIGHT_DEVICE" set 0
+            ;;
+        *)
+            echo "Usage: $0 [on|off]"
             ;;
     esac
 else
