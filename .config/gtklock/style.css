@@ -1,59 +1,70 @@
 /*
- * This file contains minimalist styling and background configuration.
- * The background will now be managed by this file.
+ * GTKLock style configuration
+ * - Nord color scheme
+ * - Text outlines for readability
+ * - Semi-transparent input ring
+ * - Slightly darker, bluish-tinted text
  */
 
 window {
-    /* Use the background shorthand property for maximum reliability. */
     background: url("file:///home/leo/Backgrounds/Wide/linux-tux.png") no-repeat center center;
-    background-size: cover; /* This is the key to preventing distortion */
-    background-color: #2E3440; /* Fallback color */
+    background-size: cover;
+    background-color: #2E3440; /* fallback */
 }
 
-/* The box containing the indicator and labels */
+/* Main container */
 #main-box {
     background-color: transparent;
 }
 
-/* The authentication revealer (the area where the input appears) */
+/* Authentication revealer */
 #main-box > revealer {
     background-color: transparent;
 }
 
-/* The password input field (the ring) */
+/* Password input field */
 #input-field {
-    outline-color: #88C0D0; /* Nord8 - Frost: a light blue for the outline */
+    outline-color: #88C0D0; /* light blue */
     outline-width: 2px;
-    background-color: rgba(67, 76, 94, 0.5); /* Nord2: a darker, semi-transparent background */
-    color: #ECEFF4; /* Nord6 - Snow Storm: a light gray for the input text */
+    background-color: rgba(67, 76, 94, 0.5); /* semi-transparent dark */
+    color: #E5E9F0; /* slightly darker bluish-tinted text */
+    text-shadow:
+        -1px -1px 0 #2E3440,
+         1px -1px 0 #2E3440,
+        -1px  1px 0 #2E3440,
+         1px  1px 0 #2E3440;
 }
 
+/* Focused input field */
 #input-field:focus {
-    outline-color: #81A1C1; /* Nord9 - Frost: a darker blue on focus */
+    outline-color: #81A1C1; /* darker blue on focus */
 }
 
-/* The clock and date labels */
+/* Labels (clock, date, messages) */
 label {
-    /* --- NEW COLOR FOR THE FONT --- */
-    color: #3B4252; /* Nord1 - Polar Night, a dark gray */
-    /* You could also use #2E3440 for an even darker color */
-    /* ------------------------------ */
-    font-family: "Noto Sans", "Ubuntu", sans-serif;
-    /* --- NEW FONT SIZE FOR A SMALLER LOOK --- */
-    font-size: 10pt;
-    /* ------------------------------------------- */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #2E3440;
+    color: #E5E9F0; /* slightly darker bluish-tinted text */
+    text-shadow:
+        -1px -1px 0 #2E3440,
+         1px -1px 0 #2E3440,
+        -1px  1px 0 #2E3440,
+         1px  1px 0 #2E3440;
 }
 
-/* Labels for messages (e.g., wrong password) */
-#message-label {
-    color: #BF616A; /* Nord11 - Aurora: a red for error messages */
-    font-size: 10pt; /* Adjusted for consistency */
+/* Unlock button text */
+#unlock-button {
+    color: #E5E9F0; /* slightly darker bluish-tinted text */
+    text-shadow:
+        -1px -1px 0 #2E3440,
+         1px -1px 0 #2E3440,
+        -1px  1px 0 #2E3440,
+         1px  1px 0 #2E3440;
+    background-color: rgba(67, 76, 94, 0.5);
+    border-radius: 6px;
+    padding: 6px 12px;
 }
 
-/* The button for showing the layout */
-#source-label {
-    color: #8FBCBB; /* Nord7 - Frost: a green-ish color for the layout text */
-    font-size: 8pt; /* Adjusted for consistency */
+/* Optional: Hover effect for button */
+#unlock-button:hover {
+    background-color: rgba(67, 76, 94, 0.7);
 }
+

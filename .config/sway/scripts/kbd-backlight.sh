@@ -1,9 +1,8 @@
-
 #!/usr/bin/env sh
 set -x
 
 # Only try if a backlight device exists
-BACKLIGHT_DEVICE=$(brightnessctl --list | grep -E 'kbd_backlight|intel_backlight' | awk '{print $2}')
+BACKLIGHT_DEVICE=$(brightnessctl --list | grep -E 'kbd_backlight|intel_backlight' | awk -F"'" '{print $2}')
 
 if [ -n "$BACKLIGHT_DEVICE" ]; then
     case "$1" in
