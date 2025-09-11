@@ -18,7 +18,7 @@ add_newline = true
 # standalone format to get os glyph on ps1 line,
 # prompt character below
 format = """
-$os$username$hostname: $directory$git_branch$git_status$git_commit$python$cmd_duration
+$os$username$hostname: $directory$git_branch$git_status$git_commit$docker_context$cmd_duration
 $character
 """
 
@@ -82,7 +82,7 @@ python_binary = ["./venv/bin/python", "python3", "python", "python2"]
 disabled = true
 
 [docker_context]
-disabled = true
+disabled = false
 
 [gcloud]
 disabled = true
