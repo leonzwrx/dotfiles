@@ -6,12 +6,13 @@
     "/mnt/Data/websites/hiddenjewelstravel/content",
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
-    "/home/leo/git_projects/personal-toolbox"
+    "/home/leo/git_projects/personal-toolbox",
+    "/home/leo/git_projects/sway-setup"
   ],
-  "openDirectory": "/home/leo/git_projects/personal-toolbox/linux_productivity/vim_stuff",
+  "openDirectory": "/home/leo/git_projects/linux-setup-scripts/resources",
   "dialogPaths": {
     "askFileDialog": "/home/leo",
-    "askDirDialog": "/home/leo/dotfiles-other",
+    "askDirDialog": "/home/leo/git_projects/sway-setup",
     "askLangFileDialog": ""
   },
   "window": {
