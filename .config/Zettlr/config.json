@@ -9,7 +9,7 @@
     "/home/leo/git_projects/personal-toolbox",
     "/home/leo/git_projects/sway-setup"
   ],
-  "openDirectory": "/home/leo/git_projects/linux-setup-scripts/resources",
+  "openDirectory": "/home/leo/git_projects/personal-toolbox/scripts/idm_ldap",
   "dialogPaths": {
     "askFileDialog": "/home/leo",
     "askDirDialog": "/home/leo/git_projects/sway-setup",
