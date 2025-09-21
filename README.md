@@ -7,6 +7,8 @@
                              
 ```                             
 # Personal dotfiles
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)![Debian](https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=fff)![https://img.shields.io/badge/Fedora-51A2DA?logo=fedora&logoColor=fff](https://img.shields.io/badge/Fedora-51A2DA?logo=fedora&logoColor=fff)![Mint](https://img.shields.io/badge/Linux%20Mint-87CF3E?logo=linuxmint&logoColor=fff)![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)![bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
+
 ![fedora_nord.png](./dotfiles-other/fedora42_sway.png)
 ## Purpose:
 
