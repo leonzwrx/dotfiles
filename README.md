@@ -18,3 +18,9 @@
 
 ## License
 The files and scripts in this repository are licensed under the MIT License, which is a very permissive license allowing you to use, modify, copy, distribute, sell, give away, etc. the software. In other words, do what you want with it. The only requirement with the MIT License is that the license and copyright notice must be provided with the software.
+
+---
+Other repos
+- [linux-setup-scripts](https://github.com/leonzwrx/linux-setup-scripts)
+- [sway-setup]( https://github.com/leonzwrx/sway-setup)
+- [homelab wiki]( https://github.com/leonzwrx/homelab-wiki)

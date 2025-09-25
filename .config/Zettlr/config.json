@@ -9,7 +9,7 @@
     "/home/leo/git_projects/personal-toolbox",
     "/home/leo/git_projects/sway-setup"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides",
+  "openDirectory": "/home/leo/git_projects/homelab-wiki",
   "dialogPaths": {
     "askFileDialog": "/home/leo",
     "askDirDialog": "/home/leo/git_projects/sway-setup",
