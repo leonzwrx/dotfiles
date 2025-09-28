@@ -1,14 +1,48 @@
-## Default Mako Config
-ignore-timeout=1
-default-timeout=7777
-anchor=top-center
-max-visible=7
-
-font=Noto Sans 9
-border-size=3
+# Global Configuration (Controls placement and general default timeout)
+sort=-time
+layer=overlay
 background-color=#31363b
-border-color=#3daee9
-margin=20
-padding=20
 width=500
 height=200
+border-size=3
+border-color=#3daee9
+border-radius=12
+icons=1
+max-icon-size=48
+
+# Set anchor for center placement
+anchor=top-center
+
+# Default timeout for Low and Normal Urgency notifications (5 seconds)
+default-timeout=5000
+ignore-timeout=1
+font=Noto Sans 9
+
+# Low Urgency (System pings, least critical)
+[urgency=low]
+background-color=#4c566a
+border-color=#3b4252
+text-color=#d8dee9
+# Will use the global default-timeout of 5000ms (5 seconds)
+
+# Normal Urgency (Standard notifications)
+[urgency=normal]
+background-color=#3b4252
+border-color=#4c566a
+text-color=#eceff4
+# Will use the global default-timeout of 5000ms (5 seconds)
+
+# Critical Urgency (e.g., low battery, important errors) - Nord Red
+# Overrides global timeout: Notifications will stay forever (manual dismissal)
+[urgency=critical]
+background-color=#bf616a
+border-color=#4c566a
+text-color=#eceff4
+default-timeout=0
+
+# Trying specific applications
+[app-name=mutti-wizard]
+background-color=#2e3440
+border-color=#5e81ac
+# You can set a custom timeout for this specific app if needed:
+# default-timeout=2000
