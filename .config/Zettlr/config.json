@@ -1,15 +1,15 @@
 {
   "version": "3.6.0",
   "openPaths": [
+    "/mnt/Data/websites/hiddenjewelstravel/content",
     "/home/leo/mnt/gdrive/Temp/rd_by_rd.md",
     "/home/leo/README.md",
-    "/mnt/Data/websites/hiddenjewelstravel/content",
     "/home/leo/git_projects/homelab-wiki",
     "/home/leo/git_projects/linux-setup-scripts",
     "/home/leo/git_projects/personal-toolbox",
     "/home/leo/git_projects/sway-setup"
   ],
-  "openDirectory": "/home/leo/git_projects/homelab-wiki/install_guides",
+  "openDirectory": "/home/leo/git_projects/linux-setup-scripts/documentation",
   "dialogPaths": {
     "askFileDialog": "/home/leo",
     "askDirDialog": "/home/leo/git_projects/sway-setup",
