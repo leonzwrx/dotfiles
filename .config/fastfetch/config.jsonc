@@ -8,7 +8,7 @@
     },
     "modules": [
         {
-            "type": "host",
+            "type": "Board",
             "key": "╭─󰌢",
             "keyColor": "green"
         },
@@ -80,11 +80,6 @@
             "keyColor": "yellow"
         },
         {
-            "type": "terminal",
-            "key": "├─",
-            "keyColor": "yellow"
-        },
-        {
             "type": "terminalfont",
             "key": "├─",
             "keyColor": "yellow"
@@ -115,8 +110,8 @@
             "keyColor": "yellow"
         },
         {
-            "type": "wallpaper",
-            "key": "╰─󰸉",
+            "type": "terminal",
+            "key": "╰─",
             "keyColor": "yellow"
         },
         "break",

@@ -36,7 +36,7 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[   \[$hostname](bold)\]'
+format = '[  \[$hostname\]](bold)'
 disabled = false
 
 # truncation length works backwards (i.e., cwd > parent > parent ...)
