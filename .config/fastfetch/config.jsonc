@@ -13,16 +13,6 @@
             "keyColor": "green"
         },
         {
-            "condition": {
-            "!host": ""
-            },
-            "type": "command",
-            "key": "╭─󰌢",
-            "text": "hostname",
-            "format": "Custom Build",
-            "keyColor": "green"
-        },
-        {
             "type": "cpu",
             "key": "├─󰻠",
             "keyColor": "green"
