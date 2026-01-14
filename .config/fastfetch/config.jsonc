@@ -8,8 +8,18 @@
     },
     "modules": [
         {
-            "type": "Board",
+            "type": "Host",
             "key": "╭─󰌢",
+            "keyColor": "green"
+        },
+        {
+            "condition": {
+            "!host": ""
+            },
+            "type": "command",
+            "key": "╭─󰌢",
+            "text": "hostname",
+            "format": "Custom Build",
             "keyColor": "green"
         },
         {
