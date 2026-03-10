@@ -1,17 +1,21 @@
 {
-  "version": "3.6.0",
-  "openPaths": [
-    "/home/leo/mnt/gdrive/Temp/rd_by_rd.md",
-    "/home/leo/README.md",
-    "/mnt/Data/websites/hiddenjewelstravel/content",
-    "/home/leo/git_projects/homelab-wiki",
-    "/home/leo/git_projects/linux-setup-scripts",
-    "/home/leo/git_projects/personal-toolbox",
-    "/home/leo/git_projects/sway-setup"
-  ],
-  "openDirectory": "/mnt/Data/websites/hiddenjewelstravel/content/destinations",
+  "version": "4.1.1",
+  "buildDate": "2026-01-27T19:59:54.096Z",
+  "app": {
+    "openFiles": [
+      "/mnt/Data/websites/hiddenjewelstravel/content/post/cruises-1.md",
+      "/home/leo/README.md"
+    ],
+    "openWorkspaces": [
+      "/home/leo/git_projects/homelab-wiki",
+      "/home/leo/git_projects/linux-setup-scripts",
+      "/home/leo/git_projects/personal-toolbox",
+      "/home/leo/git_projects/sway-setup"
+    ]
+  },
+  "openDirectory": "/home/leo/git_projects/homelab-wiki",
   "dialogPaths": {
-    "askFileDialog": "/home/leo",
+    "askFileDialog": "/mnt/Data/websites/hiddenjewelstravel/content/post",
     "askDirDialog": "/home/leo/git_projects/sway-setup",
     "askLangFileDialog": ""
   },
@@ -21,6 +25,7 @@
     "sidebarVisible": false,
     "currentSidebarTab": "toc",
     "recentGlobalSearches": [
+      "#prior-to-editing",
       "vfio",
       "VIM",
       "color zones"
@@ -71,25 +76,35 @@
   "sortFoldersFirst": true,
   "muteLines": true,
   "fileManagerMode": "combined",
+  "fileManagerShowFiles": true,
+  "fileManagerShowWorkspaces": true,
   "fileNameDisplay": "title+heading",
   "newFileNamePattern": "%id.md",
   "newFileDontPrompt": false,
   "export": {
     "dir": "temp",
     "stripTags": false,
+    "autoOpenExportedFiles": true,
+    "enforceMarkSupport": true,
     "stripLinks": "full",
     "cslLibrary": "",
     "cslStyle": "",
     "useBundledPandoc": true,
     "exportQmdWithQuarto": false,
-    "singleFileLastExporter": "HTML to Markdown.yaml",
-    "customCommands": []
+    "customCommands": [],
+    "selectedProfiles": [
+      {
+        "filePath": "/home/leo/git_projects/homelab-wiki/photography_documentation/darktable.md",
+        "profile": "HTML.yaml"
+      }
+    ],
+    "lastUsedProfile": "HTML.yaml"
   },
   "zkn": {
     "idRE": "(\\d{14})",
     "idGen": "%Y%M%D%h%m%s",
-    "linkFilenameOnly": false,
-    "linkWithFilename": "never",
+    "linkAddFileTitle": true,
+    "linkWithIDIfPossible": false,
     "linkFormat": "link|title",
     "autoSearch": true,
     "customDirectory": ""
@@ -100,6 +115,7 @@
     "autoCloseBrackets": true,
     "showLinkPreviews": true,
     "showWhitespace": false,
+    "showMarkdownLineNumbers": false,
     "defaultSaveImagePath": "assets",
     "citeStyle": "regular",
     "enableTableHelper": true,
@@ -125,6 +141,7 @@
           "pt": "pt-PT",
           "ca": "ca-ES"
         },
+        "ignoredRules": [],
         "provider": "official",
         "customServer": "",
         "username": "",
@@ -134,8 +151,8 @@
     "autoCorrect": {
       "active": true,
       "magicQuotes": {
-        "primary": "«…»",
-        "secondary": "„…“"
+        "primary": "“…”",
+        "secondary": "‘…’"
       },
       "replacements": [
         {
@@ -340,6 +357,7 @@
     "markdownFileExtensions": false,
     "imageWidth": 100,
     "imageHeight": 50,
+    "renderingMode": "preview",
     "renderCitations": true,
     "renderIframes": true,
     "renderImages": true,
@@ -347,9 +365,45 @@
     "renderMath": true,
     "renderTasks": true,
     "renderHTags": false,
-    "renderEmphasis": false
+    "renderEmphasis": false,
+    "renderPandoc": true,
+    "renderHorizontalRules": true
   },
-  "selectedDicts": [],
+  "files": {
+    "builtin": {
+      "showInFilemanager": true,
+      "showInSidebar": false,
+      "openWith": "zettlr"
+    },
+    "images": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "pdf": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "msoffice": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "openOffice": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "dataFiles": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    }
+  },
+  "selectedDicts": [
+    "en-US"
+  ],
   "appLang": "en-US",
   "debug": false,
   "watchdog": {
@@ -373,7 +427,6 @@
     "showNewFileButton": true,
     "showPreviousFileButton": true,
     "showNextFileButton": true,
-    "showToggleReadabilityButton": true,
     "showMarkdownCommentButton": true,
     "showMarkdownLinkButton": true,
     "showMarkdownImageButton": true,

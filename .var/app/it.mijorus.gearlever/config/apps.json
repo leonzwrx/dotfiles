@@ -1,1 +1,21 @@
-{"WmV0dGxy": {"b64name": "WmV0dGxy", "update_url": "https://github.com/Zettlr/Zettlr/releases/download/*/Zettlr-*-x86_64.AppImage", "update_url_manager": "GithubUpdater", "name": "Zettlr"}, "T3BlblJHQg==": {"b64name": "T3BlblJHQg==", "update_url": "https://openrgb.org/releases/release_0.9/OpenRGB_0.9_x86_64_b5f46e3.AppImage", "update_url_manager": "StaticFileUpdater", "name": "OpenRGB"}}
+{
+    "WmV0dGxy": {
+        "b64name": "WmV0dGxy",
+        "update_url": "https://github.com/Zettlr/Zettlr/releases/download/*/Zettlr-*-x86_64.AppImage",
+        "update_url_manager": "GithubUpdater",
+        "name": "Zettlr"
+    },
+    "T3BlblJHQg==": {
+        "b64name": "T3BlblJHQg==",
+        "name": "OpenRGB"
+    },
+    "TmVvdmlkZQ==": {
+        "b64name": "TmVvdmlkZQ==",
+        "update_url": "https://github.com/neovide/neovide/releases/latest/download/neovide.AppImage",
+        "update_url_manager": "StaticFileUpdater",
+        "update_manager_config": {
+            "url": "https://github.com/neovide/neovide/releases/latest/download/neovide.AppImage"
+        },
+        "name": "Neovide"
+    }
+}
